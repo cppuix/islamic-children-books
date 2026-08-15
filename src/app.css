@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Cinzel';           /* The name YOU give it */
+    src: url('/fonts/Cinzel.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+  @font-face {
+    font-family: 'FiraCode';           /* The name YOU give it */
+    src: url('/fonts/FiraCode.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+  @font-face {
+    font-family: 'AmiriQuran';           /* The name YOU give it */
+    src: url('/fonts/AmiriQuran.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+  @font-face {
+    font-family: 'Lateef';           /* The name YOU give it */
+    src: url('/fonts/Lateef.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+  @font-face {
+    font-family: 'Montserrat';           /* The name YOU give it */
+    src: url('/fonts/Montserrat.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+  @font-face {
+    font-family: 'PlaypenSansArabic';           /* The name YOU give it */
+    src: url('/fonts/PlaypenSansArabic.woff2') format('woff2'); /* Where to find it */
+    font-weight: 400;                /* Normal weight */
+    font-style: normal;              /* Not italic */
+    font-display: swap;              /* How to handle loading (explained below) */
+  }
+
+[lang="ar"]
+{
+    font-family: 'Amiri Quran', 'Lateef', serif;
+}
+
+body {
+    font-family: 'PlaypenSansArabic';
+    background-color: #f5ecd7;
+    background-image: url('/theme-elements/paper.svg'), url('/theme-elements/star-tile.svg');
+}
