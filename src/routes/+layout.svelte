@@ -11,10 +11,11 @@
 </svelte:head>
 
 <nav id="mainNav">
+	<img id="nav-logo" src="/images/logo.png" alt="logo">
+
 	<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>
 		Home</a
 	>
-
 	<a
 		href="/booklets"
 		class="nav-link"
@@ -22,7 +23,6 @@
 	>
 		Booklets</a
 	>
-
 	<a
 		href="/apps"
 		class="nav-link"
@@ -30,7 +30,6 @@
 	>
 		Apps</a
 	>
-
 	<a
 		href="/essays"
 		class="nav-link"
@@ -38,7 +37,6 @@
 	>
 		Essays</a
 	>
-
 	<a
 		href="/about"
 		class="nav-link"
@@ -63,6 +61,15 @@
 	#mainNav {
 		display: flex;
 		justify-content: flex-end;
+	}
+
+	#nav-logo
+	{
+		width: auto;
+		height: 3.5rem;
+		margin-right: auto;
+		margin-left: 1rem;
+		margin-top: 0.5rem;
 	}
 
 	.nav-link {

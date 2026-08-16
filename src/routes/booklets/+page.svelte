@@ -21,6 +21,7 @@
             <!--<p class="book-category">{book.category}</p>!-->
             <p class="book-description">{book.description}</p>
             <a
+                target="_blank"
                 class="book-link read-btn"
                 href={book.link}
                 aria-label="book-link">Read</a
