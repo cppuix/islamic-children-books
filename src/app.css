@@ -1,58 +1,236 @@
-@font-face {
-    font-family: 'Cinzel';           /* The name YOU give it */
-    src: url('/fonts/Cinzel.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'Cinzel';
+    /* The name YOU give it */
+    src: url('/fonts/Cinzel.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
-  @font-face {
-    font-family: 'FiraCode';           /* The name YOU give it */
-    src: url('/fonts/FiraCode.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'FiraCode';
+    /* The name YOU give it */
+    src: url('/fonts/FiraCode.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
-  @font-face {
-    font-family: 'AmiriQuran';           /* The name YOU give it */
-    src: url('/fonts/AmiriQuran.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'AmiriQuran';
+    /* The name YOU give it */
+    src: url('/fonts/AmiriQuran.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
-  @font-face {
-    font-family: 'Lateef';           /* The name YOU give it */
-    src: url('/fonts/Lateef.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'Lateef';
+    /* The name YOU give it */
+    src: url('/fonts/Lateef.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
-  @font-face {
-    font-family: 'Montserrat';           /* The name YOU give it */
-    src: url('/fonts/Montserrat.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'Montserrat';
+    /* The name YOU give it */
+    src: url('/fonts/Montserrat.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
-  @font-face {
-    font-family: 'PlaypenSansArabic';           /* The name YOU give it */
-    src: url('/fonts/PlaypenSansArabic.woff2') format('woff2'); /* Where to find it */
-    font-weight: 400;                /* Normal weight */
-    font-style: normal;              /* Not italic */
-    font-display: swap;              /* How to handle loading (explained below) */
-  }
+@font-face
+{
+    font-family: 'PlaypenSansArabic';
+    /* The name YOU give it */
+    src: url('/fonts/PlaypenSansArabic.woff2') format('woff2');
+    /* Where to find it */
+    font-weight: 400;
+    /* Normal weight */
+    font-style: normal;
+    /* Not italic */
+    font-display: swap;
+    /* How to handle loading (explained below) */
+}
 
 [lang="ar"]
 {
     font-family: 'Amiri Quran', 'Lateef', serif;
 }
 
-body {
+:root
+{
+    /* =========================================
+       1. THE RAW PALETTE (The "What")
+       Keep these exact names so you remember the hex codes
+       ========================================= */
+
+    /* Primary & Accent Colors */
+    --color-emerald-deep: #0B483B;
+    --color-emerald-bright: #0F6851;
+    --color-gold-accent: #C79A40;
+    --color-gold-light: #E4C068;
+    --color-crimson-accent: #800A1D;
+
+    /* Neutral & Parchment Backgrounds */
+    --color-parchment-light: #F7EFE0;
+    --color-parchment-base: #EAD9B8;
+    --color-parchment-dark: #CBB084;
+
+    /* Text & UI Details */
+    --color-text-main: #1A1815;
+    --color-text-muted: #6B5B49;
+
+
+    /* =========================================
+       2. THE SEMANTIC MAPPING (The "Why")
+       Map the raw colors to their purpose in the book
+       ========================================= */
+
+    /* Surfaces */
+    --paper-page: var(--color-parchment-light);
+    --paper-cover: var(--color-parchment-base);
+    --paper-aged: var(--color-parchment-dark);
+
+    /* Structure */
+    --leather-binding: var(--color-emerald-deep);
+    --ink-green: var(--color-emerald-bright);
+
+    /* Decoration */
+    --gold-leaf: var(--color-gold-accent);
+    --gold-shine: var(--color-gold-light);
+
+    /* Action */
+    --ribbon-red: var(--color-crimson-accent);
+
+    /* Text */
+    --ink-black: var(--color-text-main);
+    --ink-faded: var(--color-text-muted);
+}
+
+/* =========================================
+     3. USAGE
+     Now you write your CSS using the Book names
+     ========================================= */
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100% of the Viewport Height */
+    margin: 0;
+
     font-family: 'PlaypenSansArabic';
-    background-color: #f5ecd7;
-    background-image: url('/theme-elements/paper.svg'), url('/theme-elements/star-tile.svg');
+    background-color: var(--paper-cover);
+    color: var(--ink-black);
+    /*background-image: url('/images/nature_6/origbig.png');*/
+    background-repeat: no-repeat;
+    background-size: fill;
+
+    scroll-behavior: smooth;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--ink-black)
+}
+
+a:hover
+{
+    color: var(--gold-shine);
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cinzel";
+}
+
+/* CUSTOM TOOLS */
+
+.divider {
+    height: 2px;
+    transform: scaleY(0.5);
+    transform-origin: center;
+    width: 100%;
+
+    /* The Magic: Transparent -> Gold -> Transparent */
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-leaf),
+        transparent
+    );
+
+    background-repeat: no-repeat;
+    border: none; /* Remove default HR borders */
+    margin: 1rem 0; /* Give it space to breathe */
+}
+
+hr {
+    height: 1px; /* Keep it thin and elegant */
+    width: 100%;
+
+    /* The Magic: Transparent -> Gold -> Transparent */
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-leaf),
+        transparent
+    );
+
+    border: none; /* Remove default HR borders */
+    margin: 2rem 0; /* Give it space to breathe */
+}
+
+.divider-fancy {
+    height: 1px;
+    width: 80%; /* Don't go full width, leave margins */
+    margin: 1rem auto; /* Center it */
+
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        /* Start invisible */ var(--gold-leaf) 50%,
+        /* Peak gold in the exact center */ transparent 100%
+            /* Fade out completely */
+    );
 }
