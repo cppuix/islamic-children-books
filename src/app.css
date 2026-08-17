@@ -186,7 +186,7 @@ h6 {
 
 /* CUSTOM TOOLS */
 
-.divider {
+.divider, hr {
     height: 2px;
     transform: scaleY(0.5);
     transform-origin: center;
@@ -203,34 +203,4 @@ h6 {
     background-repeat: no-repeat;
     border: none; /* Remove default HR borders */
     margin: 1rem 0; /* Give it space to breathe */
-}
-
-hr {
-    height: 1px; /* Keep it thin and elegant */
-    width: 100%;
-
-    /* The Magic: Transparent -> Gold -> Transparent */
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--gold-leaf),
-        transparent
-    );
-
-    border: none; /* Remove default HR borders */
-    margin: 2rem 0; /* Give it space to breathe */
-}
-
-.divider-fancy {
-    height: 1px;
-    width: 80%; /* Don't go full width, leave margins */
-    margin: 1rem auto; /* Center it */
-
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        /* Start invisible */ var(--gold-leaf) 50%,
-        /* Peak gold in the exact center */ transparent 100%
-            /* Fade out completely */
-    );
 }

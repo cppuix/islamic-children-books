@@ -2,7 +2,7 @@
 title: "Veggies"
 date: 2026-08-02
 source: "https://islaamchildrenbooks.blogspot.com/2026/08/veggies.html"
-labels: ['veggies']
+labels: []
 ---
 Treat yourself just like a child who needs to eat his veggies.
 

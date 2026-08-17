@@ -26,7 +26,7 @@ History shows that hearts are not conquered by force. They are conquered by pati
 
 For this reason Allāh commanded gentleness even in the face of arrogance and tyranny. When Mūsā and Hārūn عليهما السلام were sent to the most tyrannical ruler of their time, they were instructed:
 
-«فَقُولَا لَهُ قَوْلًا لَيِّنًا»
+{فَقُولَا لَهُ قَوْلًا لَيِّنًا}
 
 “Speak to him with gentle speech.”
 

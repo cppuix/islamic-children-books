@@ -2,6 +2,7 @@
 
 <script>
     import { essays } from "$lib/data/essays.js";
+    const contentPath = "$lib/content/";
 </script>
 
 <h2 class="page-title">Essays</h2>
@@ -9,7 +10,7 @@
 <ul>
     {#each essays as essay}
         <li>
-            <a href={essay.link}>{essay.title}</a>
+            <a href='/essays/{essay.id}'>{essay.title}</a>
             <p class="lead">{essay.lead}</p>
             <p class="date">{essay.date}</p>
             <div class="tags">
