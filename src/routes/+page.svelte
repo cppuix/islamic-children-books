@@ -13,7 +13,7 @@
 
 <main class="hero-layout">
     <aside class="seal-anchor">
-        <WaxSeal size="2.8rem" aria-label="Home" />
+        <WaxSeal size="10rem" aria-label="Home" />
     </aside>
 
     <article class="hero-content">

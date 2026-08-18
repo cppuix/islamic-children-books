@@ -51,7 +51,7 @@
 </svelte:head>
 
 <nav id="mainNav">
-	<WaxSeal />
+	<WaxSeal size="4rem" aria-label="Home" />
 
 	<button id="burger-button" onclick={setIsOpen}>☰</button>
 	<div id="nav-links" class:open={isOpen}>
