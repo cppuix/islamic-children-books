@@ -1,0 +1,50 @@
+media:
+  input: static/images
+  output: /images
+
+content:
+  - name: books
+    label: Booklets
+    type: file
+    path: src/lib/data/books.json
+    list: true
+    fields:
+      - { name: id, label: Slug / ID, type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: subtitle, label: Subtitle, type: string }
+      - { name: category, label: Category, type: string }
+      - { name: description, label: Description, type: text }
+      - { name: link, label: Link / Telegram URL, type: string, required: true }
+      - { name: thumbnail, label: Cover Image, type: image }
+      - { name: tags, label: Tags, type: list }
+      - { name: featured, label: Featured on Home, type: boolean }
+
+  - name: apps
+    label: Interactive Apps
+    type: file
+    path: src/lib/data/apps.json
+    list: true
+    fields:
+      - { name: id, label: Slug / ID, type: string, required: true }
+      - { name: title, label: App Title, type: string, required: true }
+      - { name: subtitle, label: Subtitle, type: string }
+      - { name: description, label: Description, type: text }
+      - { name: pricing, label: Pricing, type: string }
+      - { name: link, label: App URL, type: string, required: true }
+      - { name: thumbnail, label: Thumbnail Image, type: image }
+      - { name: tags, label: Tags, type: list }
+      - { name: featured, label: Featured on Home, type: boolean }
+
+  - name: essays
+    label: Tarbiyah Essays
+    type: file
+    path: src/lib/data/essays.json
+    list: true
+    fields:
+      - { name: id, label: Slug / ID, type: string, required: true }
+      - { name: title, label: Essay Title, type: string, required: true }
+      - { name: date, label: Publication Date, type: date, required: true }
+      - { name: lead, label: Lead / Excerpt, type: text, required: true }
+      - { name: link, label: Original Blog Post Link, type: string }
+      - { name: tags, label: Tags, type: list }
+      - { name: featured, label: Featured on Home, type: boolean }

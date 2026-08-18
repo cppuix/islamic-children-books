@@ -1,9 +1,9 @@
 <!-- src/routes/+page.svelte -->
 <script>
     import WaxSeal from "$lib/components/WaxSeal.svelte";
-    import { books } from "$lib/data/books.js";
-    import { apps } from "$lib/data/apps.js";
-    import { essays } from "$lib/data/essays.js";
+    import books from "$lib/data/books.json";
+    import apps from "$lib/data/apps.json";
+    import essays from "$lib/data/essays.json";
 
     // Get ALL featured items (or fallback to the first item if none tagged)
     const featuredBooks = books.filter((b) => b.featured).length ? books.filter((b) => b.featured) : [books[0]];
@@ -136,9 +136,10 @@
         font-family: "Cinzel", serif;
         font-size: 0.7rem;
         letter-spacing: 0.25em;
-        color: #b98a2e;
+        color: var(--ink-black);
         display: block;
         margin-bottom: 1rem;
+        font-weight: bold;
     }
 
     .main-title {

@@ -1,7 +1,7 @@
 <!-- src/routes/applets/+page.svelte -->
 
 <script>
-    import { essays } from "$lib/data/essays.js";
+    import essays from "$lib/data/essays.json";
     const contentPath = "$lib/content/";
 </script>
 
