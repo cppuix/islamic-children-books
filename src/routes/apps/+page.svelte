@@ -1,7 +1,7 @@
 <!-- src/routes/applets/+page.svelte -->
 
 <script>
-    import { apps } from "$lib/data/apps.js";
+    import apps from "$lib/data/apps.json";
 </script>
 
 

@@ -1,7 +1,7 @@
 <!-- src/routes/booklets/+page.svelte -->
 
 <script>
-    import { books } from "$lib/data/books.js";
+    import books from "$lib/data/books.json";
 </script>
 
 
