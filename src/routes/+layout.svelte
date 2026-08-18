@@ -3,7 +3,16 @@
 	import "../app.css";
 
 	import { page } from "$app/state";
+    import WaxSeal from "$lib/components/WaxSeal.svelte";
 	let { children } = $props();
+
+	let isOpen = $state(false);
+
+	function setIsOpen() {
+		console.log("before", isOpen);
+		isOpen = !isOpen;
+		console.log("after", isOpen);
+	}
 </script>
 
 <svelte:head>
@@ -11,39 +20,16 @@
 </svelte:head>
 
 <nav id="mainNav">
-	<img id="nav-logo" src="/images/logo.png" alt="logo">
+	<WaxSeal />
 
-	<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>
-		Home</a
-	>
-	<a
-		href="/booklets"
-		class="nav-link"
-		class:active={page.url.pathname === "/booklets"}
-	>
-		Booklets</a
-	>
-	<a
-		href="/apps"
-		class="nav-link"
-		class:active={page.url.pathname === "/apps"}
-	>
-		Apps</a
-	>
-	<a
-		href="/essays"
-		class="nav-link"
-		class:active={page.url.pathname === "/essays"}
-	>
-		Essays</a
-	>
-	<a
-		href="/about"
-		class="nav-link"
-		class:active={page.url.pathname === "/about"}
-	>
-		About</a
-	>
+	<button id="burger-button" onclick={setIsOpen}>☰</button>
+	<div id="nav-links" class:open={isOpen}>
+		<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>Home</a>
+		<a href="/booklets" class="nav-link" class:active={page.url.pathname === "/booklets"}>Booklets</a>
+		<a href="/apps" class="nav-link" class:active={page.url.pathname === "/apps"}>Apps</a>
+		<a href="/essays" class="nav-link" class:active={page.url.pathname === "/essays"}>Essays</a>
+		<a href="/about" class="nav-link" class:active={page.url.pathname === "/about"}>About</a>
+	</div>
 </nav>
 
 <main>
@@ -54,17 +40,22 @@
 <a href="#footer" id="tobottombutton">▼</a>
 <footer id="footer">
 	<div class="divider"></div>
-	<p>Personal use is permitted. For distribution, contact us: <a href="mailto:alqaddaaree@gmail.com">alqaddaaree@gmail.com</a></p>
+	<p>
+		Personal use is permitted. For distribution, contact us: <a href="mailto:alqaddaaree@gmail.com"
+			>alqaddaaree@gmail.com</a
+		>
+	</p>
 </footer>
 
 <style>
 	#mainNav {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
-	#nav-logo
-	{
+	#nav-logo {
 		width: auto;
 		height: 3.5rem;
 		margin-right: auto;
@@ -72,11 +63,31 @@
 		margin-top: 0.5rem;
 	}
 
+	#burger-button {
+		background: none;
+		border: none;
+		font-size: 1.8rem;
+		color: var(--ink-black);
+		cursor: pointer;
+	}
+
+	#nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+	#nav-links.open
+	{
+		display: flex;
+	}
+	
 	.nav-link {
 		padding: 20px;
 	}
 	.nav-link.active {
 		border-bottom: 1px solid var(--gold-leaf);
+		background-color: var(--gold-shine);
 	}
 
 	main {
@@ -84,6 +95,7 @@
 		display: flow-root;
 		margin: 2rem;
 		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	footer {
@@ -91,8 +103,7 @@
 		font-size: 0.68em;
 	}
 
-	#totopbutton
-	{
+	#totopbutton {
 		position: fixed;
 		bottom: 4rem;
 		right: 1rem;
@@ -105,8 +116,7 @@
 		border: 2px solid var(--gold-shine);
 	}
 
-	#tobottombutton
-	{
+	#tobottombutton {
 		position: fixed;
 		bottom: 1rem;
 		right: 1rem;
@@ -118,5 +128,16 @@
 		color: var(--paper-page);
 		border: 2px solid var(--gold-shine);
 	}
-	
+
+	@media (min-width: 768px) {
+		#nav-links {
+			display: flex;
+			flex-direction: row;
+			width: auto;
+		}
+		#burger-button
+		{
+			display: none;
+		}
+	}
 </style>
