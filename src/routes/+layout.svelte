@@ -1,9 +1,8 @@
 <script>
-	import favicon from "$lib/assets/favicon.svg";
 	import "../app.css";
 
 	import { page } from "$app/state";
-    import WaxSeal from "$lib/components/WaxSeal.svelte";
+	import WaxSeal from "$lib/components/WaxSeal.svelte";
 	let { children } = $props();
 
 	let isOpen = $state(false);
@@ -13,10 +12,42 @@
 		isOpen = !isOpen;
 		console.log("after", isOpen);
 	}
+
+	const siteTitle = "Islamic Children's Books & Tarbiyah";
+	const siteDescription =
+		"A quiet library of booklets, offline learning tools, and reflections—nurturing faith and intellect in harmony with the fiṭrah.";
+	const siteUrl = "https://islamic-children-books.vercel.app/"; // Replace with your actual domain
+	const ogImage = `${siteUrl}/images/og-image.png`; // 1200x630px social preview image
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<!-- Basic Meta -->
+	<title>{siteTitle}</title>
+	<meta name="description" content={siteDescription} />
+	<meta name="author" content="Islamic Children's Books" />
+	<link rel="canonical" href={siteUrl} />
+
+	<!-- Favicons / Icons -->
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<meta name="theme-color" content="#0f513d" />
+
+	<!-- Open Graph / Facebook / WhatsApp -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={siteUrl} />
+	<meta property="og:title" content={siteTitle} />
+	<meta property="og:description" content={siteDescription} />
+	<meta property="og:image" content={ogImage} />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={siteTitle} />
+	<meta name="twitter:description" content={siteDescription} />
+	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <nav id="mainNav">
@@ -77,11 +108,10 @@
 		width: 100%;
 		text-align: center;
 	}
-	#nav-links.open
-	{
+	#nav-links.open {
 		display: flex;
 	}
-	
+
 	.nav-link {
 		padding: 20px;
 	}
@@ -135,8 +165,7 @@
 			flex-direction: row;
 			width: auto;
 		}
-		#burger-button
-		{
+		#burger-button {
 			display: none;
 		}
 	}

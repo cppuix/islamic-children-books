@@ -13,7 +13,7 @@
 
 <main class="hero-layout">
     <aside class="seal-anchor">
-        <WaxSeal size="10rem" />
+        <WaxSeal size="2.8rem" aria-label="Home" />
     </aside>
 
     <article class="hero-content">
@@ -31,7 +31,7 @@
 
         <!-- Navigation CTAs -->
         <div class="cta-group">
-            <a class="cta-primary" href="/books">
+            <a class="cta-primary" href="/booklets">
                 <span>Browse Booklets ({books.length})</span>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
