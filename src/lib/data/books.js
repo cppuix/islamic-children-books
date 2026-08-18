@@ -9,7 +9,8 @@ export const books = [
         thumbnail: '/images/booklets/kanz-atfal.png',
         description: 'A simplified millenary for teaching children Creed, Monotheism, and more using the Q&A method.',
         link: 'https://t.me/islamicChildrenBooks/108',
-        tags: ['aqeedah', 'children', 'qa']
+        tags: ['aqeedah', 'children', 'qa'],
+        featured: false
     },
     {
         id: 'pillars-shahadah-1',
@@ -19,7 +20,8 @@ export const books = [
         thumbnail: '/images/booklets/pillars-shahadah-1.jpg', // Note: You listed this as .pdf in your assets
         description: 'An introduction to the testimony of faith for young minds.',
         link: 'https://t.me/islamicChildrenBooks/160',
-        tags: ['fiqh', 'pillars']
+        tags: ['fiqh', 'pillars'],
+        featured: false
     },
     {
         id: 'pillars-shahadah-2',
@@ -29,7 +31,8 @@ export const books = [
         thumbnail: '/images/booklets/pillars-shahadah-2.webp',
         description: 'Continuing the journey of understanding the testimony of faith.',
         link: 'https://t.me/islamicChildrenBooks/171',
-        tags: ['fiqh', 'pillars']
+        tags: ['fiqh', 'pillars'],
+        featured: false
     },
     {
         id: 'pillars-shahadah-stories',
@@ -39,7 +42,8 @@ export const books = [
         thumbnail: '/images/booklets/pillars-shahadah-stories.webp',
         description: 'Stories that bring the meaning of the Shahaadah to life for children.',
         link: 'https://t.me/islamicChildrenBooks/180',
-        tags: ['fiqh', 'pillars', 'stories']
+        tags: ['fiqh', 'pillars', 'stories'],
+        featured: false
     },
     {
         id: 'pillars-salat',
@@ -49,7 +53,8 @@ export const books = [
         thumbnail: '/images/booklets/pillars-salat.webp',
         description: 'An illustrated guide focusing on the meaning, purpose, and mindset of daily prayer.',
         link: 'https://t.me/islamicChildrenBooks/191',
-        tags: ['fiqh', 'pillars', 'salah']
+        tags: ['fiqh', 'pillars', 'salah'],
+        featured: false
     },
     {
         id: 'abu-bakr',
@@ -59,7 +64,8 @@ export const books = [
         thumbnail: '/images/booklets/abu-bakr.webp',
         description: 'A storybook showing the character of Abu Bakr through bravery, generosity, and trust.',
         link: 'https://t.me/islamicChildrenBooks/173',
-        tags: ['seerah', 'companions']
+        tags: ['seerah', 'companions'],
+        featured: true
     },
     {
         id: 'who-is-my-prophet',
@@ -69,7 +75,8 @@ export const books = [
         thumbnail: '/images/booklets/who-is-my-prophet.webp',
         description: 'A simple storybook to teach children about the life (Sīrah) of our Prophet Muhammad ﷺ.',
         link: 'https://t.me/islamicChildrenBooks/142',
-        tags: ['seerah', 'prophet']
+        tags: ['seerah', 'prophet'],
+        featured: false
     },
     {
         id: 'eid-guide',
@@ -79,7 +86,8 @@ export const books = [
         thumbnail: '/images/booklets/eid-guide.webp',
         description: 'A short booklet to help Muslim children learn about the Sunnah of the Day of Eid.',
         link: 'https://t.me/islamicChildrenBooks/120',
-        tags: ['adab', 'eid', 'sunnah']
+        tags: ['adab', 'eid', 'sunnah'],
+        featured: false
     },
     {
         id: 'fitrah-harmony',
@@ -89,6 +97,7 @@ export const books = [
         thumbnail: '/images/booklets/fitrah-harmony.webp',
         description: 'Why misunderstanding religious concepts can clash with a child\'s natural disposition.',
         link: 'https://t.me/islamicChildrenBooks/200', // Updated to the latest "Heavily edited" version link
-        tags: ['tarbiyah', 'parents']
+        tags: ['tarbiyah', 'parents'],
+        featured: false
     }
 ];

@@ -9,7 +9,8 @@ export const apps = [
         link: 'https://kanz-atfaal.vercel.app/',
         thumbnail: '/images/apps/kanz-atfal.png',
         pricing: 'Free',
-        tags: ['creed', 'qa', 'bilingual']
+        tags: ['creed', 'qa', 'bilingual'],
+        featured: false
     },
     {
         id: 'vocabulary-harvest',
@@ -19,7 +20,8 @@ export const apps = [
         link: 'https://vocabulary-harvest.vercel.app',
         thumbnail: '/images/apps/vocabulary-harvest.png',
         pricing: 'Pay what you want (suggested: €10)',
-        tags: ['arabic', 'vocabulary', 'bilingual']
+        tags: ['arabic', 'vocabulary', 'bilingual'],
+        featured: false
     },
     {
         id: 'sifat-salat',
@@ -29,6 +31,7 @@ export const apps = [
         link: 'https://sifat-salat.vercel.app/',
         thumbnail: '/images/apps/sifat-salat.png',
         pricing: 'Pay what you want (suggested: €10)',
-        tags: ['prayer', 'albani', 'bilingual']
+        tags: ['prayer', 'albani', 'bilingual'],
+        featured: true
     }
 ];

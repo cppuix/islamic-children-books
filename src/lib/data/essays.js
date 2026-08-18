@@ -18,7 +18,8 @@ export const essays = [
         date: '2026-08-02',
         lead: 'Treat yourself just like a child who needs to eat his veggies.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/08/veggies.html',
-        tags: ['reflection']
+        tags: ['reflection'],
+        featured: false
     },
     {
         id: 'use-the-handle-not-the-crowbar',
@@ -26,7 +27,8 @@ export const essays = [
         date: '2026-05-16',
         lead: 'A child resists one path, so we say he hates the destination. But what if the path is the problem?',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/05/use-handle-not-crowbar.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: true
     },
     {
         id: 'not-every-interruption-is-an-interruption',
@@ -34,7 +36,8 @@ export const essays = [
         date: '2026-05-06',
         lead: 'The child is not trying to stand between you and knowledge. He only wants his mommy.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/05/not-every-interruption-is-interruption.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
         // includes "Thought Process Behind The Rewrite" as an appendix, in the same md
     },
     {
@@ -43,7 +46,8 @@ export const essays = [
         date: '2026-04-15',
         lead: 'Being smart serves no better purpose than seeking the truth — and seeking the truth is what actually makes you smarter.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/04/the-truth.html',
-        tags: ['reflection']
+        tags: ['reflection'],
+        featured: false
     },
     {
         id: 'step-by-step-and-youll-grow-so-big',
@@ -51,7 +55,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'داداش، تكبر قداش — step by step, and you\'ll grow so big.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/step-by-step-and-youll-grow-so-big.html',
-        tags: ['reflection']
+        tags: ['reflection'],
+        featured: false
     },
     {
         id: 'landscape',
@@ -59,7 +64,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'A tall page invites reading. A wide page invites exploring.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/landscape.html',
-        tags: ['craft']
+        tags: ['craft'],
+        featured: false
     },
     {
         id: 'you-cant-pass-on-the-love-of-the-salaf-if-you-yourself-dont-feel-it',
@@ -67,7 +73,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Learn about them alongside your child. "Mommy and daddy are also learning with me…must be important!"',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/you-cant-pass-on-love-of-salaf-if-you.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
     },
     {
         id: 'what-does-it-mean-to-do-your-best',
@@ -75,7 +82,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Real devotion is not proven by peaks. It is proven by continuity.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/what-does-it-mean-to-do-your-best.html',
-        tags: ['reflection']
+        tags: ['reflection'],
+        featured: false
     },
     {
         id: 'one-step-at-a-time',
@@ -83,7 +91,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'The end goal is not the goal — the steps are what we must uphold.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/one-step-at-time.html',
-        tags: ['reflection']
+        tags: ['reflection'],
+        featured: false
     },
     {
         id: 'do-not-overwhelm-him',
@@ -91,7 +100,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Space is not emptiness. Space is mercy for the eye and the mind.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/do-not-overwhelm-him.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
     },
     {
         id: 'do-not-do-the-thinking-for-him',
@@ -99,7 +109,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Give him a stick, and it becomes a horse. Give him nothing, and he creates a world.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/do-not-do-thinking-for-him.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
     },
     {
         id: 'teaching-in-harmony-with-the-fitrah',
@@ -107,7 +118,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Do not force upon children what Allāh did not make obligatory.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/teaching-in-harmony-with-fitrah.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: true
     },
     {
         id: 'most-people-try-to-learn-languages-backwards',
@@ -115,7 +127,8 @@ export const essays = [
         date: '2026-03-28',
         lead: 'Grammar is structure, but vocabulary is substance.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/03/most-people-try-to-learn-languages.html',
-        tags: ['arabic']
+        tags: ['arabic'],
+        featured: false
     },
     {
         id: 'do-not-design-the-plant',
@@ -123,7 +136,8 @@ export const essays = [
         date: '2026-02-23',
         lead: 'Your task is not to design the plant. It already has one.',
         link: 'https://islaamchildrenbooks.blogspot.com/2026/02/do-not-design-plant.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
     },
     {
         id: 'raising-thinkers-not-repeaters',
@@ -131,6 +145,7 @@ export const essays = [
         date: '2026-01-25',
         lead: "Don't dump details on children, plant seeds instead.",
         link: 'https://islaamchildrenbooks.blogspot.com/2026/01/raising-thinkers-not-repeaters.html',
-        tags: ['tarbiyah']
+        tags: ['tarbiyah'],
+        featured: false
     }
 ];
