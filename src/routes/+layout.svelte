@@ -21,6 +21,15 @@
 </script>
 
 <svelte:head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKGB5SWTL"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-VKKGB5SWTL');
+	</script>
 	<!-- Basic Meta -->
 	<title>{siteTitle}</title>
 	<meta name="description" content={siteDescription} />
@@ -49,6 +58,7 @@
 	<meta name="twitter:description" content={siteDescription} />
 	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
+
 
 <nav id="mainNav">
 	<WaxSeal size="4rem" aria-label="Home" />
