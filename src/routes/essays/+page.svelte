@@ -15,7 +15,7 @@
             <p class="date">{essay.date}</p>
             <div class="tags">
                 {#each essay.tags as tag}
-                    <a class="tag" href="">{tag}</a>
+                <a class="tag" href="/essays?tag={tag}">{tag}</a>
                 {/each}
             </div>
         </li>

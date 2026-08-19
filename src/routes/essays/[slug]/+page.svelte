@@ -33,7 +33,7 @@
     <p class="date">{formattedDate}</p>
     <div class="tags">
         {#each data.meta.labels as label}
-            <a class="tag" href="">{label}</a>
+        <a class="tag" href="/essays?tag={label}">{label}</a>
         {/each}
     </div>
 
@@ -53,18 +53,12 @@
             -2px -2px 16px rgb(from var(--gold-leaf) r g b / 10%),
             2px 2px 16px rgb(from var(--gold-leaf) r g b / 10%)
     }
-    li {
-        margin-bottom: 2rem;
-    }
+
     a {
         text-decoration: underline;
         color: var(--leather-binding);
     }
 
-    .lead {
-        color: var(--ink-faded);
-        font-size: 0.8em;
-    }
     .date {
         color: var(--ink-green);
         font-size: 0.8em;

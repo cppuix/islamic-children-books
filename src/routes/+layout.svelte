@@ -1,4 +1,5 @@
 <script>
+	
 	import "../app.css";
 
 	import { page } from "$app/state";
@@ -94,14 +95,6 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-	}
-
-	#nav-logo {
-		width: auto;
-		height: 3.5rem;
-		margin-right: auto;
-		margin-left: 1rem;
-		margin-top: 0.5rem;
 	}
 
 	#burger-button {

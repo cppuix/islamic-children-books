@@ -43,14 +43,6 @@
         flex-direction: column;
         gap: 5px;
     }
-
-    .page-title {
-    }
-
-    .page-subtitle {
-        font-size: 0.68rem;
-    }
-
     .apps-inventory {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

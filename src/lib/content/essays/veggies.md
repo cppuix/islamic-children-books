@@ -50,5 +50,3 @@ Or is Mustapha still healthy when he eats all the donuts he wants…?
 — Al-Qaddari, an ex-child who surprised adults by eating veggies and asking for them as a toddler.
 
 Inspired by Ibn al-Qayyim
-
- How is this not tempting and delicious?!
