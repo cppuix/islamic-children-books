@@ -2,7 +2,7 @@
 title: "Use The Handle, Not The Crowbar"
 date: 2026-05-16
 source: "https://islaamchildrenbooks.blogspot.com/2026/05/use-handle-not-crowbar.html"
-labels: []
+labels: ['approach']
 ---
 He's refusing his books, avoiding his lessons, dragging his feet when it is time to memorize, read, write, revise, sit, listen. You see the parent getting tired, the teacher getting frustrated, the child becoming slippery and evasive, and the easy conclusion is:
 

@@ -4,6 +4,7 @@
 
 	import { page } from "$app/state";
 	import WaxSeal from "$lib/components/WaxSeal.svelte";
+    import { afterNavigate } from "$app/navigation";
 	let { children } = $props();
 
 	let isOpen = $state(false);
@@ -19,6 +20,8 @@
 		"A quiet library of booklets, offline learning tools, and reflections—nurturing faith and intellect in harmony with the fiṭrah.";
 	const siteUrl = "https://islamic-children-books.vercel.app/"; // Replace with your actual domain
 	const ogImage = `${siteUrl}/images/og-image.png`; // 1200x630px social preview image
+
+	afterNavigate(() => { isOpen = false; });
 </script>
 
 <svelte:head>
@@ -65,12 +68,14 @@
 	<WaxSeal size="4rem" aria-label="Home" />
 
 	<button id="burger-button" onclick={setIsOpen}>☰</button>
-	<div id="nav-links" class:open={isOpen}>
-		<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>Home</a>
-		<a href="/booklets" class="nav-link" class:active={page.url.pathname === "/booklets"}>Booklets</a>
-		<a href="/apps" class="nav-link" class:active={page.url.pathname === "/apps"}>Apps</a>
-		<a href="/essays" class="nav-link" class:active={page.url.pathname === "/essays"}>Essays</a>
-		<a href="/about" class="nav-link" class:active={page.url.pathname === "/about"}>About</a>
+	<div id="nav-container" class:open={isOpen}>
+		<div id="nav-links">
+			<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>Home</a>
+			<a href="/booklets" class="nav-link" class:active={page.url.pathname === "/booklets"}>Booklets</a>
+			<a href="/apps" class="nav-link" class:active={page.url.pathname === "/apps"}>Apps</a>
+			<a href="/essays" class="nav-link" class:active={page.url.pathname === "/essays"}>Essays</a>
+			<a href="/about" class="nav-link" class:active={page.url.pathname === "/about"}>About</a>
+		</div>
 	</div>
 </nav>
 
@@ -105,15 +110,43 @@
 		cursor: pointer;
 	}
 
-	#nav-links {
-		display: none;
-		flex-direction: column;
-		width: 100%;
-		text-align: center;
-	}
-	#nav-links.open {
-		display: flex;
-	}
+	/* Mobile: Full-width grid container with smooth transition */
+#nav-container {
+    display: grid;
+    grid-template-rows: 0fr;
+    width: 100%; /* Keeps burger button pushed to the right edge */
+    transition: grid-template-rows 0.3s ease-out; /* The animation magic */
+}
+
+#nav-container.open {
+    grid-template-rows: 1fr;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    overflow: hidden; /* Clips content while 0fr */
+}
+
+/* Desktop Reset */
+@media (min-width: 768px) {
+    #burger-button {
+        display: none;
+    }
+
+    #nav-container {
+        display: block; /* Disable mobile grid behavior */
+        width: auto;
+        grid-template-rows: none;
+    }
+
+    #nav-links {
+        flex-direction: row;
+        overflow: visible;
+    }
+}
 
 	.nav-link {
 		padding: 20px;

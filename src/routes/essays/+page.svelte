@@ -2,7 +2,7 @@
 
 <script>
     import essays from "$lib/data/essays.json";
-    const contentPath = "$lib/content/";
+    const contentPath = "$lib/content/essays";
 </script>
 
 <h2 class="page-title">Essays</h2>

@@ -136,7 +136,7 @@
         font-family: "Cinzel", serif;
         font-size: 0.7rem;
         letter-spacing: 0.25em;
-        color: var(--ink-black);
+        color: var(--gold-leaf);
         display: block;
         margin-bottom: 1rem;
         font-weight: bold;
