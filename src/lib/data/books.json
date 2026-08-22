@@ -1,101 +1,112 @@
 [
-    {
-      "id": "kanz-al-atfal",
-      "title": "Kanz al-Aṭfāl",
-      "subtitle": "The Treasure of Children",
-      "category": "Creed",
-      "thumbnail": "/images/booklets/kanz-atfal.png",
-      "description": "A simplified millenary for teaching children Creed, Monotheism, and more using the Q&A method.",
-      "link": "https://t.me/islamicChildrenBooks/108",
-      "tags": ["aqeedah", "children", "qa"],
-      "featured": false
-    },
-    {
-      "id": "pillars-shahadah-1",
-      "title": "The Pillars of Islaam",
-      "subtitle": "The Shahaadah - Part 1",
-      "category": "Pillars",
-      "thumbnail": "/images/booklets/pillars-shahadah-1.jpg",
-      "description": "An introduction to the testimony of faith for young minds.",
-      "link": "https://t.me/islamicChildrenBooks/160",
-      "tags": ["fiqh", "pillars"],
-      "featured": false
-    },
-    {
-      "id": "pillars-shahadah-2",
-      "title": "The Pillars of Islaam",
-      "subtitle": "The Shahaadah - Part 2",
-      "category": "Pillars",
-      "thumbnail": "/images/booklets/pillars-shahadah-2.webp",
-      "description": "Continuing the journey of understanding the testimony of faith.",
-      "link": "https://t.me/islamicChildrenBooks/171",
-      "tags": ["fiqh", "pillars"],
-      "featured": false
-    },
-    {
-      "id": "pillars-shahadah-stories",
-      "title": "The Pillars of Islaam",
-      "subtitle": "The Shahaadah - Stories",
-      "category": "Pillars",
-      "thumbnail": "/images/booklets/pillars-shahadah-stories.webp",
-      "description": "Stories that bring the meaning of the Shahaadah to life for children.",
-      "link": "https://t.me/islamicChildrenBooks/180",
-      "tags": ["fiqh", "pillars", "stories"],
-      "featured": false
-    },
-    {
-      "id": "pillars-salat",
-      "title": "The Pillars of Islaam",
-      "subtitle": "The Second Pillar: Ṣalaah",
-      "category": "Pillars",
-      "thumbnail": "/images/booklets/pillars-salat.webp",
-      "description": "An illustrated guide focusing on the meaning, purpose, and mindset of daily prayer.",
-      "link": "https://t.me/islamicChildrenBooks/191",
-      "tags": ["fiqh", "pillars", "salah"],
-      "featured": false
-    },
-    {
-      "id": "abu-bakr",
-      "title": "How Did Abū Bakr Accept Islām?",
-      "subtitle": "Made Understandable for Children",
-      "category": "Seerah",
-      "thumbnail": "/images/booklets/abu-bakr.webp",
-      "description": "A storybook showing the character of Abu Bakr through bravery, generosity, and trust.",
-      "link": "https://t.me/islamicChildrenBooks/173",
-      "tags": ["seerah", "companions"],
-      "featured": true
-    },
-    {
-      "id": "who-is-my-prophet",
-      "title": "About My Prophet",
-      "subtitle": "A Simple Storybook",
-      "category": "Seerah",
-      "thumbnail": "/images/booklets/who-is-my-prophet.webp",
-      "description": "A simple storybook to teach children about the life (Sīrah) of our Prophet Muhammad ﷺ.",
-      "link": "https://t.me/islamicChildrenBooks/142",
-      "tags": ["seerah", "prophet"],
-      "featured": false
-    },
-    {
-      "id": "eid-guide",
-      "title": "The Day of Eid",
-      "subtitle": "A Little Guide For Young Muslims",
-      "category": "Adab",
-      "thumbnail": "/images/booklets/eid-guide.webp",
-      "description": "A short booklet to help Muslim children learn about the Sunnah of the Day of Eid.",
-      "link": "https://t.me/islamicChildrenBooks/120",
-      "tags": ["adab", "eid", "sunnah"],
-      "featured": false
-    },
-    {
-      "id": "fitrah-harmony",
-      "title": "Teaching In Harmony With The Fiṭrah",
-      "subtitle": "For Parents & Teachers",
-      "category": "Parenting",
-      "thumbnail": "/images/booklets/fitrah-harmony.webp",
-      "description": "Why misunderstanding religious concepts can clash with a child's natural disposition.",
-      "link": "https://t.me/islamicChildrenBooks/200",
-      "tags": ["tarbiyah", "parents"],
-      "featured": false
-    }
-  ]
+  {
+    "id": "kanz-al-atfal",
+    "title": "Kanz al-Aṭfāl",
+    "subtitle": "The Treasure of Children",
+    "category": "Creed",
+    "thumbnail": "/images/booklets/kanz-atfal.png",
+    "description": "A simplified millenary for teaching children Creed, Monotheism, and more using the Q&A method.",
+    "link": "https://drive.google.com/uc?export=download&id=19YLRqylsQsAr7NWfCka9zVSZzsD0pzJG",
+    "tags": ["aqeedah", "children", "qa"],
+    "featured": false
+  },
+  {
+    "id": "pillars-shahadah-1",
+    "title": "The Pillars of Islaam",
+    "subtitle": "The Shahaadah - Part 1",
+    "category": "Pillars",
+    "thumbnail": "/images/booklets/pillars-shahadah-1.jpg",
+    "description": "An introduction to the testimony of faith for young minds.",
+    "link": "https://drive.google.com/uc?export=download&id=1lXXvhmyJIRh953CtQEM9SwWSY-zMrYV3",
+    "tags": ["fiqh", "pillars"],
+    "featured": false
+  },
+  {
+    "id": "pillars-shahadah-2",
+    "title": "The Pillars of Islaam",
+    "subtitle": "The Shahaadah - Part 2",
+    "category": "Pillars",
+    "thumbnail": "/images/booklets/pillars-shahadah-2.webp",
+    "description": "Continuing the journey of understanding the testimony of faith.",
+    "link": "https://drive.google.com/uc?export=download&id=1NW40VZdsgYN5mgDSX2LMHSpW5Nihid-5",
+    "tags": ["fiqh", "pillars"],
+    "featured": false
+  },
+  {
+    "id": "pillars-shahadah-stories",
+    "title": "The Pillars of Islaam",
+    "subtitle": "The Shahaadah - Stories",
+    "category": "Pillars",
+    "thumbnail": "/images/booklets/pillars-shahadah-stories.webp",
+    "description": "Stories that bring the meaning of the Shahaadah to life for children.",
+    "link": "https://drive.google.com/uc?export=download&id=1a7IxVZBBtVCrhCKKxWMr6T4ocf9YpLKX",
+    "tags": ["fiqh", "pillars", "stories"],
+    "featured": false
+  },
+  {
+    "id": "pillars-salat",
+    "title": "The Pillars of Islaam",
+    "subtitle": "The Second Pillar: Ṣalaah",
+    "category": "Pillars",
+    "thumbnail": "/images/booklets/pillars-salat.webp",
+    "description": "An illustrated guide focusing on the meaning, purpose, and mindset of daily prayer.",
+    "link": "https://drive.google.com/uc?export=download&id=14Ddj79N5xnIayMxoOOIRxRQHmbv4bcN2",
+    "tags": ["fiqh", "pillars", "salah"],
+    "featured": false
+  },
+  {
+    "id": "abu-bakr",
+    "title": "How Did Abū Bakr Accept Islām?",
+    "subtitle": "Made Understandable for Children",
+    "category": "Seerah",
+    "thumbnail": "/images/booklets/abu-bakr.webp",
+    "description": "A storybook showing the character of Abu Bakr through bravery, generosity, and trust.",
+    "link": "https://drive.google.com/uc?export=download&id=1-a5L0073C9d0Fbvm1mijyVOLUZjJSdqX",
+    "tags": ["seerah", "companions"],
+    "featured": true
+  },
+  {
+    "id": "who-is-my-prophet",
+    "title": "About My Prophet",
+    "subtitle": "A Simple Storybook",
+    "category": "Seerah",
+    "thumbnail": "/images/booklets/who-is-my-prophet.webp",
+    "description": "A simple storybook to teach children about the life (Sīrah) of our Prophet Muhammad ﷺ.",
+    "link": "https://drive.google.com/uc?export=download&id=1oCO7En6Y_I8HK6fpxZby7zSFBqLN-ah5",
+    "tags": ["seerah", "prophet"],
+    "featured": false
+  },
+  {
+    "id": "eid-guide",
+    "title": "The Day of Eid",
+    "subtitle": "A Little Guide For Young Muslims",
+    "category": "Adab",
+    "thumbnail": "/images/booklets/eid-guide.webp",
+    "description": "A short booklet to help Muslim children learn about the Sunnah of the Day of Eid.",
+    "link": "https://drive.google.com/uc?export=download&id=1hAcomwGU9OAuEcTMMWxyBRUJhp4VyTXd",
+    "tags": ["adab", "eid", "sunnah"],
+    "featured": false
+  },
+  {
+    "id": "fitrah-harmony",
+    "title": "Teaching In Harmony With The Fiṭrah",
+    "subtitle": "For Parents & Teachers",
+    "category": "Parenting",
+    "thumbnail": "/images/booklets/fitrah-harmony.webp",
+    "description": "Why misunderstanding religious concepts can clash with a child's natural disposition.",
+    "link": "https://drive.google.com/uc?export=download&id=1CCI-Yb5tckgMHQ4WNDMRTSQMK7SfTgDH",
+    "tags": ["tarbiyah", "parents"],
+    "featured": false
+  },
+  {
+    "id": "abu-bakr-ar",
+    "title": "كيف أسلم أبو بكر الصديق",
+    "subtitle": "سلسلة كيف أسلم الصحابة",
+    "category": "Seerah",
+    "thumbnail": "/images/booklets/abu-bakr-ar.webp",
+    "description": "قصة توضح شخصية أبي بكر الصديق رضي الله عنه من خلال الشجاعة والكرم والثقة.",
+    "link": "https://drive.google.com/uc?export=download&id=1f14dZiFqsq4gg1ZD6Pd7JUGDOt0xPS1N",
+    "tags": ["seerah", "companions", "arabic"],
+    "featured": false
+  }
+]
