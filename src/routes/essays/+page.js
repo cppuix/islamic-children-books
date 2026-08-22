@@ -1,17 +1,16 @@
 // src/routes/essays/+page.js
-export async function load() {
-    const files = import.meta.glob('$lib/content/essays/*.md', { eager: true });
-    const essays = Object.entries(files).map(([path, file]) => {
-        const slug = path.split('/').pop().replace('.md', '');
-        return {
-            slug,
-            ...file.metadata
-        };
-    });
-    
+import essaysData from '$lib/data/essays.json';
+import searchIndex from '$lib/data/search-index.json';
 
-    // Sort by date descending
-    essays.sort((a, b) => new Date(b.date) - new Date(a.date));
+// 1. Disable prerendering because this page uses dynamic query parameters
+export const prerender = false;
 
-    return { essays };
+export function load() {
+    // 2. Spread into a new array to avoid mutating the cached JSON module
+    const essays = [...essaysData].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return { 
+        essays, 
+        searchIndex 
+    };
 }

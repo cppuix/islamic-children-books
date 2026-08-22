@@ -1,208 +1,241 @@
 <script>
-	
-	import "../app.css";
+    import "../app.css";
 
-	import { page } from "$app/state";
-	import WaxSeal from "$lib/components/WaxSeal.svelte";
+    import { page } from "$app/state";
+    import WaxSeal from "$lib/components/WaxSeal.svelte";
     import { afterNavigate } from "$app/navigation";
-	let { children } = $props();
+    let { children } = $props();
 
-	let isOpen = $state(false);
+    let isOpen = $state(false);
 
-	function setIsOpen() {
-		console.log("before", isOpen);
-		isOpen = !isOpen;
-		console.log("after", isOpen);
-	}
+    function setIsOpen() {
+        isOpen = !isOpen;
+    }
 
-	const siteTitle = "Islamic Children's Books & Tarbiyah";
-	const siteDescription =
-		"A quiet library of booklets, offline learning tools, and reflections—nurturing faith and intellect in harmony with the fiṭrah.";
-	const siteUrl = "https://islamic-children-books.vercel.app/"; // Replace with your actual domain
-	const ogImage = `${siteUrl}/images/og-image.png`; // 1200x630px social preview image
+    const siteTitle = "Islamic Children's Books";
+    const siteDescription =
+        "A quiet library of booklets, offline learning tools, and reflections—nurturing faith and intellect in harmony with the fiṭrah.";
+    const siteUrl = "https://islamic-children-books.vercel.app/";
+    const ogImage = `${siteUrl}/images/og-image.png`;
 
-	afterNavigate(() => { isOpen = false; });
+    afterNavigate(() => { isOpen = false; });
 </script>
 
 <svelte:head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKGB5SWTL"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-VKKGB5SWTL');
-	</script>
-	<!-- Basic Meta -->
-	<title>{siteTitle}</title>
-	<meta name="description" content={siteDescription} />
-	<meta name="author" content="Islamic Children's Books" />
-	<link rel="canonical" href={siteUrl} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKGB5SWTL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-VKKGB5SWTL');
+    </script>
+    <!-- Basic Meta -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="author" content="Islamic Children's Books" />
+    <link rel="canonical" href={siteUrl} />
 
-	<!-- Favicons / Icons -->
-	<link rel="icon" type="image/png" href="/favicon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- Favicons / Icons -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<link rel="manifest" href="/site.webmanifest" />
-	<meta name="theme-color" content="#0f513d" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0f513d" />
 
-	<!-- Open Graph / Facebook / WhatsApp -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={siteUrl} />
-	<meta property="og:title" content={siteTitle} />
-	<meta property="og:description" content={siteDescription} />
-	<meta property="og:image" content={ogImage} />
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={ogImage} />
 
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={siteTitle} />
-	<meta name="twitter:description" content={siteDescription} />
-	<meta name="twitter:image" content={ogImage} />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
+<nav id="mainNav" aria-label="Main Navigation">
+    <WaxSeal size="4rem" aria-label="Home" />
 
-<nav id="mainNav">
-	<WaxSeal size="4rem" aria-label="Home" />
+    <button 
+        id="burger-button" 
+        onclick={setIsOpen}
+        aria-expanded={isOpen}
+        aria-controls="nav-container"
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+    >
+        <span aria-hidden="true">☰</span>
+    </button>
 
-	<button id="burger-button" onclick={setIsOpen}>☰</button>
-	<div id="nav-container" class:open={isOpen}>
-		<div id="nav-links">
-			<a href="/" class="nav-link" class:active={page.url.pathname === "/"}>Home</a>
-			<a href="/booklets" class="nav-link" class:active={page.url.pathname === "/booklets"}>Booklets</a>
-			<a href="/apps" class="nav-link" class:active={page.url.pathname === "/apps"}>Apps</a>
-			<a href="/essays" class="nav-link" class:active={page.url.pathname === "/essays"}>Essays</a>
-			<a href="/about" class="nav-link" class:active={page.url.pathname === "/about"}>About</a>
-		</div>
-	</div>
+    <div id="nav-container" class:open={isOpen}>
+        <div id="nav-links">
+            <a 
+                href="/" 
+                class="nav-link" 
+                class:active={page.url.pathname === "/"}
+                aria-current={page.url.pathname === "/" ? "page" : undefined}
+            >Home</a>
+            <a 
+                href="/booklets" 
+                class="nav-link" 
+                class:active={page.url.pathname === "/booklets"}
+                aria-current={page.url.pathname === "/booklets" ? "page" : undefined}
+            >Booklets</a>
+            <a 
+                href="/apps" 
+                class="nav-link" 
+                class:active={page.url.pathname === "/apps"}
+                aria-current={page.url.pathname === "/apps" ? "page" : undefined}
+            >Apps</a>
+            <a 
+                href="/essays" 
+                class="nav-link" 
+                class:active={page.url.pathname === "/essays"}
+                aria-current={page.url.pathname === "/essays" ? "page" : undefined}
+            >Essays</a>
+            <a 
+                href="/about" 
+                class="nav-link" 
+                class:active={page.url.pathname === "/about"}
+                aria-current={page.url.pathname === "/about" ? "page" : undefined}
+            >About</a>
+        </div>
+    </div>
 </nav>
 
 <main>
-	{@render children()}
+    {@render children()}
 </main>
 
-<a href="#top" id="totopbutton">▲</a>
-<a href="#footer" id="tobottombutton">▼</a>
+<a href="#top" id="totopbutton" aria-label="Scroll to top">
+    <span aria-hidden="true">▲</span>
+</a>
+<a href="#footer" id="tobottombutton" aria-label="Scroll to bottom">
+    <span aria-hidden="true">▼</span>
+</a>
+
 <footer id="footer">
-	<div class="divider"></div>
-	<p>
-		Personal use is permitted. For distribution, contact us: <a href="mailto:alqaddaaree@gmail.com"
-			>alqaddaaree@gmail.com</a
-		>
-	</p>
+    <div class="divider"></div>
+    <p>
+        Personal use is permitted. For distribution, contact us: <a href="mailto:alqaddaaree@gmail.com"
+            >alqaddaaree@gmail.com</a
+        >
+    </p>
 </footer>
 
 <style>
-	#mainNav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-
-	#burger-button {
-		background: none;
-		border: none;
-		font-size: 1.8rem;
-		color: var(--ink-black);
-		cursor: pointer;
-	}
-
-	/* Mobile: Full-width grid container with smooth transition */
-#nav-container {
-    display: grid;
-    grid-template-rows: 0fr;
-    width: 100%; /* Keeps burger button pushed to the right edge */
-    transition: grid-template-rows 0.3s ease-out; /* The animation magic */
-}
-
-#nav-container.open {
-    grid-template-rows: 1fr;
-}
-
-#nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    overflow: hidden; /* Clips content while 0fr */
-}
-
-/* Desktop Reset */
-@media (min-width: 768px) {
-    #burger-button {
-        display: none;
+    #mainNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
+    #burger-button {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--ink-black);
+        cursor: pointer;
+    }
+
+    /* Mobile: Full-width grid container with smooth transition */
     #nav-container {
-        display: block; /* Disable mobile grid behavior */
-        width: auto;
-        grid-template-rows: none;
+        display: grid;
+        grid-template-rows: 0fr;
+        width: 100%;
+        transition: grid-template-rows 0.3s ease-out;
+    }
+
+    #nav-container.open {
+        grid-template-rows: 1fr;
     }
 
     #nav-links {
-        flex-direction: row;
-        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
     }
-}
 
-	.nav-link {
-		padding: 20px;
-	}
-	.nav-link.active {
-		border-bottom: 1px solid var(--gold-leaf);
-		background-color: var(--gold-shine);
-	}
+    .nav-link {
+        padding: 20px;
+    }
+    
+    .nav-link.active {
+        border-bottom: 1px solid var(--gold-leaf);
+        background-color: var(--gold-shine);
+    }
 
-	main {
-		flex: 1;
-		display: flow-root;
-		margin: 2rem;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+    main {
+        flex: 1;
+        display: flow-root;
+        margin: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-	footer {
-		text-align: center;
-		font-size: 0.68em;
-	}
+    footer {
+        text-align: center;
+        font-size: 0.68em;
+    }
 
-	#totopbutton {
-		position: fixed;
-		bottom: 4rem;
-		right: 1rem;
-		width: 2rem;
-		height: 2rem;
-		border-radius: 50%;
-		background-color: var(--gold-leaf);
-		text-align: center;
-		color: var(--paper-page);
-		border: 2px solid var(--gold-shine);
-	}
+    #totopbutton {
+        position: fixed;
+        bottom: 4rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: var(--gold-leaf);
+        text-align: center;
+        color: var(--paper-page);
+        border: 2px solid var(--gold-shine);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
 
-	#tobottombutton {
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-		width: 2rem;
-		height: 2rem;
-		border-radius: 50%;
-		background-color: var(--gold-leaf);
-		text-align: center;
-		color: var(--paper-page);
-		border: 2px solid var(--gold-shine);
-	}
+    #tobottombutton {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: var(--gold-leaf);
+        text-align: center;
+        color: var(--paper-page);
+        border: 2px solid var(--gold-shine);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
 
-	@media (min-width: 768px) {
-		#nav-links {
-			display: flex;
-			flex-direction: row;
-			width: auto;
-		}
-		#burger-button {
-			display: none;
-		}
-	}
+    /* Desktop Reset */
+    @media (min-width: 768px) {
+        #burger-button {
+            display: none;
+        }
+
+        #nav-container {
+            display: block;
+            width: auto;
+            grid-template-rows: none;
+        }
+
+        #nav-links {
+            flex-direction: row;
+            overflow: visible;
+        }
+    }
 </style>
