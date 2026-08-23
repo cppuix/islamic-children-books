@@ -3,48 +3,84 @@ media:
   output: /images
 
 content:
+  # --- 1. Booklets (JSON) ---
   - name: books
     label: Booklets
     type: file
     path: src/lib/data/books.json
     list: true
+    # Tells Pages CMS which columns to show in the list view
+    view:
+      fields: [ title, category, featured ]
+      primary: title
     fields:
-      - { name: id, label: Slug / ID, type: string, required: true }
+      - { name: id, label: Slug (Do not change), type: string, required: true }
       - { name: title, label: Title, type: string, required: true }
       - { name: subtitle, label: Subtitle, type: string }
-      - { name: category, label: Category, type: string }
+      
+      # Dropdown for Categories
+      - name: category
+        label: Category
+        type: select
+        options:
+          - Creed
+          - Pillars
+          - Seerah
+          - Adab
+          - Parenting
+          
       - { name: description, label: Description, type: text }
-      - { name: link, label: Link / Telegram URL, type: string, required: true }
+      - { name: link, label: Download Link (PDF), type: string, required: true }
       - { name: thumbnail, label: Cover Image, type: image }
       - { name: tags, label: Tags, type: list }
       - { name: featured, label: Featured on Home, type: boolean }
 
+  # --- 2. Apps (JSON) ---
   - name: apps
     label: Interactive Apps
     type: file
     path: src/lib/data/apps.json
     list: true
+    view:
+      fields: [ title, pricing, featured ]
+      primary: title
     fields:
-      - { name: id, label: Slug / ID, type: string, required: true }
+      - { name: id, label: Slug (Do not change), type: string, required: true }
       - { name: title, label: App Title, type: string, required: true }
       - { name: subtitle, label: Subtitle, type: string }
       - { name: description, label: Description, type: text }
-      - { name: pricing, label: Pricing, type: string }
+      
+      # Dropdown for Pricing
+      - name: pricing
+        label: Pricing
+        type: select
+        options:
+          - Free
+          - Freemium
+          - Paid
+          - Subscription
+          
       - { name: link, label: App URL, type: string, required: true }
       - { name: thumbnail, label: Thumbnail Image, type: image }
       - { name: tags, label: Tags, type: list }
       - { name: featured, label: Featured on Home, type: boolean }
 
+  # --- 3. Essays (MARKDOWN!) ---
+  # This is the game-changer. It edits the .md files directly!
   - name: essays
     label: Tarbiyah Essays
-    type: file
-    path: src/lib/data/essays.json
-    list: true
+    type: collection
+    path: src/lib/content/essays
+    view:
+      fields: [ title, date, lead ]
+      primary: title
     fields:
-      - { name: id, label: Slug / ID, type: string, required: true }
+      # Pages CMS automatically maps these fields to the YAML frontmatter
       - { name: title, label: Essay Title, type: string, required: true }
       - { name: date, label: Publication Date, type: date, required: true }
-      - { name: lead, label: Lead / Excerpt, type: text, required: true }
-      - { name: link, label: Original Blog Post Link, type: string }
+      - { name: lead, label: Lead / Excerpt, type: text }
       - { name: tags, label: Tags, type: list }
       - { name: featured, label: Featured on Home, type: boolean }
+      
+      # This creates a beautiful WYSIWYG editor for the essay body
+      - { name: body, label: Essay Content, type: rich-text }
