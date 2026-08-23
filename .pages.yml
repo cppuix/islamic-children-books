@@ -84,3 +84,11 @@ content:
       
       # This creates a beautiful WYSIWYG editor for the essay body
       - { name: body, label: Essay Content, type: rich-text }
+
+  - name: about
+    label: About Page
+    type: file
+    path: src/lib/content/about/about.md
+    fields:
+      - { name: title, label: Page Title, type: string, required: true }
+      - { name: body, label: Page Content, type: rich-text }

@@ -2,8 +2,9 @@
   {
     "id": "how-do-i-teach-my-child-fajr-prayer",
     "title": "How Do I Teach My Child Fajr Prayer — Ash-shaykh Khālid ash-Shāriḥī",
-    "lead": "How do I teach my son the Fajr prayer when he is seven years old?",
     "date": "2026-08-22",
+    "lead": "بسم الله الرحمن الرحيم In the Name of Allāh, the Most Gracious, the Most Merciful. سائل يقول: كيف أعلم ولدي صلاة الفجر وعمره سبع سنوات؟ لو أيقظته من ا...",
+    "link": "",
     "tags": [
       "fajr",
       "prayer",
@@ -16,10 +17,23 @@
     "id": "veggies",
     "title": "Veggies",
     "date": "2026-08-02",
-    "lead": "Treat yourself just like a child who needs to eat his veggies.",
+    "lead": "Treat yourself just like a child who needs to eat his veggies. \"No moooooom…broccoli doesn't taste good! I hate broccoli!!! I want donuts dipped in mo...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/08/veggies.html",
     "tags": [
-      "reflection"
+      "veggies"
+    ],
+    "featured": false
+  },
+  {
+    "id": "a-glimpse-of-the-reverence-for-the-sunnah-in-the-life-of-al-albani",
+    "title": "️A glimpse of the reverence for the Sunnah in the life of al-Albānī",
+    "date": "2026-06-07",
+    "lead": "️صورة من تعظيم السُّنة والعناية في حياة الشيخ الألباني رحمه الله. ️A glimpse of the reverence for the Sunnah and care for it in the life of ash-shaykh...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/06/a-glimpse-of-reverence-for-sunnah-in.html",
+    "tags": [
+      "daughter",
+      "names",
+      "reverence"
     ],
     "featured": false
   },
@@ -27,21 +41,32 @@
     "id": "use-the-handle-not-the-crowbar",
     "title": "Use The Handle, Not The Crowbar",
     "date": "2026-05-16",
-    "lead": "A child resists one path, so we say he hates the destination. But what if the path is the problem?",
+    "lead": "He's refusing his books, avoiding his lessons, dragging his feet when it is time to memorize, read, write, revise, sit, listen. You see the parent get...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/05/use-handle-not-crowbar.html",
     "tags": [
-      "tarbiyah"
+      "approach"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "id": "not-every-interruption-is-an-interruption",
     "title": "Not Every Interruption Is An Interruption",
     "date": "2026-05-06",
-    "lead": "The child is not trying to stand between you and knowledge. He only wants his mommy.",
+    "lead": "So there she sits with her book…finally, after a long day, she finally finds a quiet moment. A page opens, her mind slowly settles, and ideas begin co...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/05/not-every-interruption-is-interruption.html",
     "tags": [
-      "tarbiyah"
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "stop-complaining-to-the-people",
+    "title": "Stop complaining to the people!",
+    "date": "2026-04-29",
+    "lead": "As Sufyān Ath-Thawrī said: حَدَّثَنَا أَحْمَدُ، نَا إِبْرَاهِيمُ الحَرْبِيُ، نَا أَبُو حَذَيْفَةَ؛ قَالَ: رَأَى الثَّوْرِيِّ رَجُلًا عِنْدَ قَوْمٍ يَش...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/04/stop-complaining-to-people.html",
+    "tags": [
+      ""
     ],
     "featured": false
   },
@@ -49,7 +74,7 @@
     "id": "the-truth",
     "title": "The Truth",
     "date": "2026-04-15",
-    "lead": "Being smart serves no better purpose than seeking the truth — and seeking the truth is what actually makes you smarter.",
+    "lead": "بسم الله الرحمن الرحيم، Allāh made this universe, and He, ʿazza wa jall, made our brains. Our brains are programmable, meaning, what you feed them, wh...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/04/the-truth.html",
     "tags": [
       "reflection"
@@ -57,13 +82,46 @@
     "featured": false
   },
   {
-    "id": "step-by-step-and-youll-grow-so-big",
-    "title": "Step By Step, And You'll Grow So Big",
+    "id": "do-not-do-the-thinking-for-him",
+    "title": "Do Not Do The Thinking For Him 💭☁️",
     "date": "2026-03-28",
-    "lead": "داداش، تكبر قداش — step by step, and you'll grow so big.",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/step-by-step-and-youll-grow-so-big.html",
+    "lead": "The child was not created empty. He was created with a mind that completes what it does not see, and builds what does not exist in front of him. Give ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/do-not-do-thinking-for-him.html",
     "tags": [
-      "reflection"
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "do-not-overwhelm-him",
+    "title": "Do Not Overwhelm Him 📖",
+    "date": "2026-03-28",
+    "lead": "Some will say: \"So what? Do I just show my child text and leave him to struggle with it?\" ❓ No. ⛔️ You do not dump knowledge on him. 📦 You introduce ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/do-not-overwhelm-him.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "how-abu-bakr-accepted-islaam-for-children",
+    "title": "How Abu Bakr رضي الله عنه Accepted Islaam — For Children",
+    "date": "2026-03-28",
+    "lead": "✨✨ Major Update ✨✨ emoji Discover How Abu Bakr رضي الله عنه Accepted Islaam — For Children When I was a child, I never had a resource that showed the ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/how-abu-bakr-accepted-islaam-for.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "islamic-creed-learning-app",
+    "title": "Islamic Creed Learning App",
+    "date": "2026-03-28",
+    "lead": "Muntaqā Kanz al-Aṭfāl — Islamic Creed Learning App A progressive web app PWA for studying Islamic creed through question-and-answer flashcards, built ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/islamic-creed-learning-app.html",
+    "tags": [
+      ""
     ],
     "featured": false
   },
@@ -71,32 +129,21 @@
     "id": "landscape",
     "title": "Landscape",
     "date": "2026-03-28",
-    "lead": "A tall page invites reading. A wide page invites exploring.",
+    "lead": "When I was a child, landscape books always caught my attention. They felt different. Most books stood upright, packed with lines of text marching down...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/03/landscape.html",
     "tags": [
-      "craft"
+      ""
     ],
     "featured": false
   },
   {
-    "id": "you-cant-pass-on-the-love-of-the-salaf-if-you-yourself-dont-feel-it",
-    "title": "You Can't Pass On The Love Of The Salaf If You Yourself Don't Feel It",
+    "id": "most-people-try-to-learn-languages-backwards",
+    "title": "Most People Try To Learn Languages Backwards",
     "date": "2026-03-28",
-    "lead": "Learn about them alongside your child. \"Mommy and daddy are also learning with me…must be important!\"",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/you-cant-pass-on-love-of-salaf-if-you.html",
+    "lead": "They begin with grammar rules, charts, verb tables, and technical explanations. They analyze the language before they even have enough words to think ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/most-people-try-to-learn-languages.html",
     "tags": [
-      "tarbiyah"
-    ],
-    "featured": false
-  },
-  {
-    "id": "what-does-it-mean-to-do-your-best",
-    "title": "What Does It Mean To \"Do Your Best\"?",
-    "date": "2026-03-28",
-    "lead": "Real devotion is not proven by peaks. It is proven by continuity.",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/what-does-it-mean-to-do-your-best.html",
-    "tags": [
-      "reflection"
+      ""
     ],
     "featured": false
   },
@@ -104,32 +151,21 @@
     "id": "one-step-at-a-time",
     "title": "One Step At A Time",
     "date": "2026-03-28",
-    "lead": "The end goal is not the goal — the steps are what we must uphold.",
+    "lead": "One step at a time and you shall arrive The end goal is not the goal the steps are what we must uphold Don't overlook your feet Doing so causes you de...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/03/one-step-at-time.html",
     "tags": [
-      "reflection"
+      ""
     ],
     "featured": false
   },
   {
-    "id": "do-not-overwhelm-him",
-    "title": "Do Not Overwhelm Him",
+    "id": "step-by-step-and-youll-grow-so-big",
+    "title": "Step By Step, And You'll Grow So Big",
     "date": "2026-03-28",
-    "lead": "Space is not emptiness. Space is mercy for the eye and the mind.",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/do-not-overwhelm-him.html",
+    "lead": "Remember, do not think about tasks whole—your brain will choke. \"You mad?!\", said the brain. \"Release depression and failure hormones!!!\", the brain a...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/step-by-step-and-youll-grow-so-big.html",
     "tags": [
-      "tarbiyah"
-    ],
-    "featured": false
-  },
-  {
-    "id": "do-not-do-the-thinking-for-him",
-    "title": "Do Not Do The Thinking For Him",
-    "date": "2026-03-28",
-    "lead": "Give him a stick, and it becomes a horse. Give him nothing, and he creates a world.",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/do-not-do-thinking-for-him.html",
-    "tags": [
-      "tarbiyah"
+      ""
     ],
     "featured": false
   },
@@ -137,32 +173,109 @@
     "id": "teaching-in-harmony-with-the-fitrah",
     "title": "Teaching In Harmony With The Fitrah",
     "date": "2026-03-28",
-    "lead": "Do not force upon children what Allāh did not make obligatory.",
+    "lead": "As parents, teachers, or any adult with a sense of responsibility, we carry the burden of nurturing the next generations and preserving them as they g...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/03/teaching-in-harmony-with-fitrah.html",
     "tags": [
-      "tarbiyah"
+      ""
     ],
-    "featured": true
+    "featured": false
   },
   {
-    "id": "most-people-try-to-learn-languages-backwards",
-    "title": "Most People Try To Learn Languages Backwards",
+    "id": "the-prophet-kissed-his-grandsons",
+    "title": "The Prophet ﷺ Kissed His Grandsons",
     "date": "2026-03-28",
-    "lead": "Grammar is structure, but vocabulary is substance.",
-    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/most-people-try-to-learn-languages.html",
+    "lead": "صحيح البخاري 5997 حدثنا أبو اليمان ، أخبرنا شعيب ، عن الزهري ، حدثنا أبو سلمة بن عبد الرحمن ، أن أبا هريرة رضي الله عنه قال : قبل رسول الله صلى الله ع...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/the-prophet-kissed-his-grandsons.html",
     "tags": [
-      "arabic"
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "the-treasure-of-children",
+    "title": "The Treasure Of Children",
+    "date": "2026-03-28",
+    "lead": "كَنْزُ الأَطْفَالِ Kanzu Al-Aṭfāl The Treasure Of Children By Doctor Fayṣal bnu Misfir al-Wādiʿī Translated and designed by ʿAbdurraḥmān bnu Mīhūb al-...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/the-treasure-of-children.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "understanding-the-nature-of-children",
+    "title": "🌱 Understanding the Nature of Children",
+    "date": "2026-03-28",
+    "lead": "When you understand the nature of children, many things that would normally cause frustration become easier to bear with patience and wisdom. A young ...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/understanding-nature-of-children.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "vocabulary-harvest-arabic-vocabulary-app-for-english-speakers",
+    "title": "Vocabulary Harvest — Arabic Vocabulary App for English Speakers",
+    "date": "2026-03-28",
+    "lead": "Vocabulary Harvest — Arabic Vocabulary App for English Speakers 🔗 Vocabulary Harvest is a beautiful, offline-first Arabic vocabulary app built for En...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/vocabulary-harvest-arabic-vocabulary.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "what-does-it-mean-to-do-your-best",
+    "title": "What Does It Mean To \\\"Do Your Best\\\"?",
+    "date": "2026-03-28",
+    "lead": "بسم الله الرحمن الرحيم What does it mean to \"do your best\"? Does it mean pushing yourself to the maximum? More effort? More time? More exhaustion? Sho...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/what-does-it-mean-to-do-your-best.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "you-cant-pass-on-the-love-of-the-salaf-if-you-yourself-dont-feel-it",
+    "title": "You Can't Pass On The Love Of The Salaf If You Yourself Don't Feel It",
+    "date": "2026-03-28",
+    "lead": "Dear parents, You can't pass on the love of the salaf if you yourself don't feel it. \"What do I do then? Don't just drop problems on us and disappear…...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/03/you-cant-pass-on-love-of-salaf-if-you.html",
+    "tags": [
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "discover-how-abu-bakr-accepted-islaam-for-children",
+    "title": "Discover How Abu Bakr رضي الله عنه Accepted Islaam — For Children",
+    "date": "2026-02-23",
+    "lead": "🌟 Discover How Abu Bakr رضي الله عنه Accepted Islaam — For Children 🌟 When I was a child, I never had a book that showed the companions of the Proph...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/02/discover-how-abu-bakr-accepted-islaam.html",
+    "tags": [
+      ""
     ],
     "featured": false
   },
   {
     "id": "do-not-design-the-plant",
-    "title": "Do Not Design The Plant",
+    "title": "Do Not Design The Plant 🌱",
     "date": "2026-02-23",
-    "lead": "Your task is not to design the plant. It already has one.",
+    "lead": "Do Not Design The Plant 🌱 Many parents do not want to raise a child; they want to realize a plan. They decide in advance who the child should be, wha...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/02/do-not-design-plant.html",
     "tags": [
-      "tarbiyah"
+      ""
+    ],
+    "featured": false
+  },
+  {
+    "id": "mind-expansion-in-a-chain-of-awe",
+    "title": "Mind Expansion in a Chain of Awe",
+    "date": "2026-02-23",
+    "lead": "السلام عليكم ورحمة الله وبركاته. Dear parents, You can't pass on the love of the salaf if you yourself don't feel it. \"What do I do then? Don't just d...",
+    "link": "https://islaamchildrenbooks.blogspot.com/2026/02/mind-expansion-in-chain-of-awe.html",
+    "tags": [
+      ""
     ],
     "featured": false
   },
@@ -170,10 +283,10 @@
     "id": "raising-thinkers-not-repeaters",
     "title": "Raising Thinkers, Not Repeaters",
     "date": "2026-01-25",
-    "lead": "Don't dump details on children, plant seeds instead.",
+    "lead": "If you want to teach a child something, you must first understand it yourself. Not at the level of a scholar, but enough to give a mental model—a fram...",
     "link": "https://islaamchildrenbooks.blogspot.com/2026/01/raising-thinkers-not-repeaters.html",
     "tags": [
-      "tarbiyah"
+      ""
     ],
     "featured": false
   }

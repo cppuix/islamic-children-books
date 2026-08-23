@@ -21,94 +21,113 @@ files.forEach(filename => {
     const content = fs.readFileSync(path.join(essaysDir, filename), 'utf-8');
     const slug = filename.replace('.md', '');
     
-    // Parse the YAML frontmatter and extract the markdown body
     const { meta, body } = extractFrontmatter(content);
 
-    // 1. Data for the Essays Listing Page (essays.json)
+    // 1. Smart Fallbacks for Legacy Files
+    const rawTags = meta.tags || meta.labels || [];
+    const tags = Array.isArray(rawTags) ? rawTags : [rawTags];
+    const link = meta.link || meta.source || '';
+    
+    // Helper function to completely clean the text (HTML + Markdown)
+    const cleanText = (text) => text
+        .replace(/<[^>]*>/g, '')       // 🧹 STRIP HTML TAGS COMPLETELY
+        .replace(/[#*`_\[\]()>]/g, '') // Strip Markdown symbols
+        .replace(/\s+/g, ' ')          // Normalize whitespace
+        .trim();
+
+    // 2. Auto-Generate Lead if missing
+    let lead = meta.lead || '';
+    if (!lead && body) {
+        const cleanedBody = cleanText(body);
+        lead = cleanedBody.substring(0, 150) + (cleanedBody.length > 150 ? '...' : '');
+    } else if (lead) {
+        lead = cleanText(lead); // Clean the lead too, just in case!
+    }
+
+    // 3. Data for the Essays Listing Page
     essaysData.push({
         id: slug,
         title: meta.title || slug,
         date: meta.date || new Date().toISOString(),
-        lead: meta.lead || '',
-        link: meta.link || '',
-        tags: meta.tags || [],
-        featured: meta.featured || false
+        lead: lead,
+        link: link,
+        tags: tags,
+        featured: meta.featured === true || meta.featured === 'true'
     });
 
-    // 2. Data for the Search Index (search-index.json)
-    const cleanContent = body
-        .replace(/[#*`_\[\]()]/g, '') // Remove markdown symbols
-        .replace(/\s+/g, ' ')         // Normalize whitespace
-        .trim();
-        
+    // 4. Data for the Search Index
+    const cleanContent = cleanText(body);
     searchIndex.push({
         slug,
-        // Include title and lead in the search text for better matching
-        searchText: ((meta.title || '') + ' ' + (meta.lead || '') + ' ' + cleanContent).toLowerCase()
+        searchText: ((meta.title || '') + ' ' + lead + ' ' + cleanContent).toLowerCase()
     });
 });
 
-// Sort essays by date descending (newest first)
+// Sort essays by date descending
 essaysData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-// Write essays.json
-fs.writeFileSync(
-    path.join(outputDir, 'essays.json'),
-    JSON.stringify(essaysData, null, 2)
-);
-
-// Write search-index.json
-fs.writeFileSync(
-    path.join(outputDir, 'search-index.json'),
-    JSON.stringify(searchIndex, null, 2)
-);
+// Write JSON files
+fs.writeFileSync(path.join(outputDir, 'essays.json'), JSON.stringify(essaysData, null, 2));
+fs.writeFileSync(path.join(outputDir, 'search-index.json'), JSON.stringify(searchIndex, null, 2));
 
 console.log(`✅ Built essays.json (${essaysData.length} entries)`);
 console.log(`✅ Built search-index.json (${searchIndex.length} entries)`);
 
+
 /**
- * Zero-dependency frontmatter parser
- * Safely extracts title, date, lead, tags, etc. from YAML frontmatter.
+ * Robust YAML frontmatter parser (Zero dependencies)
  */
 function extractFrontmatter(content) {
     const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
     if (!match) return { meta: {}, body: content };
 
-    const yaml = match[1];
+    const lines = match[1].split('\n');
     const meta = {};
+    let currentKey = null;
+    let currentValue = [];
 
-    // Simple string matches
-    const titleMatch = yaml.match(/^title:\s*(.*)/m);
-    if (titleMatch) meta.title = titleMatch[1].replace(/^["']|["']$/g, '').trim();
-
-    const dateMatch = yaml.match(/^date:\s*(.*)/m);
-    if (dateMatch) meta.date = dateMatch[1].trim();
-
-    const linkMatch = yaml.match(/^link:\s*(.*)/m);
-    if (linkMatch) meta.link = linkMatch[1].replace(/^["']|["']$/g, '').trim();
-
-    const featuredMatch = yaml.match(/^featured:\s*(.*)/m);
-    if (featuredMatch) meta.featured = featuredMatch[1].trim() === 'true';
-
-    // Multiline safe regex using 's' (dotAll) flag for text blocks
-    const leadMatch = yaml.match(/^lead:\s*(.*?)(?=\n[a-zA-Z_]+:|$)/s);
-    if (leadMatch) meta.lead = leadMatch[1].replace(/^["']|["']$/g, '').replace(/\n\s*/g, ' ').trim();
-
-    // Parse Tags (handles both inline arrays `[a, b]` and block arrays `- a \n - b`)
-    const tagsMatch = yaml.match(/^tags:\s*(.*?)(?=\n[a-zA-Z_]+:|$)/s);
-    if (tagsMatch) {
-        const tagsBlock = tagsMatch[1].trim();
-        if (tagsBlock.startsWith('[')) {
-            meta.tags = tagsBlock.slice(1, -1).split(',').map(t => t.trim().replace(/^["']|["']$/g, ''));
-        } else {
-            meta.tags = tagsBlock.split('\n')
-                                 .map(t => t.trim())
-                                 .filter(t => t.startsWith('-'))
-                                 .map(t => t.replace(/^-\s*/, '').replace(/^["']|["']$/g, ''));
+    const saveCurrent = () => {
+        if (currentKey && !Array.isArray(meta[currentKey])) {
+            let val = currentValue.join('\n').trim();
+            if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+                val = val.slice(1, -1);
+            }
+            val = val.replace(/^(\||>)[+-]?\s*/, '');
+            val = val.replace(/\s+/g, ' ').trim();
+            meta[currentKey] = val;
         }
-    } else {
-        meta.tags = [];
+    };
+
+    for (const line of lines) {
+        const keyMatch = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)/);
+        
+        if (keyMatch && !line.startsWith(' ') && !line.startsWith('\t')) {
+            saveCurrent();
+            currentKey = keyMatch[1];
+            let rawVal = keyMatch[2].trim();
+            
+            if (rawVal.startsWith('[') && rawVal.endsWith(']')) {
+                meta[currentKey] = rawVal.slice(1, -1).split(',').map(t => t.trim().replace(/^["']|["']$/g, ''));
+                currentKey = null; 
+            } 
+            else if (rawVal === '' || /^(\||>)[+-]?$/.test(rawVal)) {
+                currentValue = [rawVal]; 
+            } 
+            else {
+                currentValue = [rawVal];
+            }
+        } else if (line.match(/^\s+-\s+/)) {
+            if (currentKey && !Array.isArray(meta[currentKey])) meta[currentKey] = [];
+            if (currentKey) {
+                const item = line.trim().replace(/^-\s+/, '').replace(/^["']|["']$/g, '');
+                meta[currentKey].push(item);
+            }
+            currentValue = []; 
+        } else {
+            if (currentKey) currentValue.push(line);
+        }
     }
+    saveCurrent();
 
     const body = content.slice(match[0].length).trim();
     return { meta, body };

@@ -89,7 +89,7 @@
 <style>
     /* Layout: Centered & Unboxed */
     .hero-layout {
-        width: 100%;
+        
         max-width: 1100px;
         margin: 0 auto;
         padding: 3rem 1.5rem;
