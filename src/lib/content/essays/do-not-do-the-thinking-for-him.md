@@ -1,8 +1,8 @@
 ---
-title: "Do Not Do The Thinking For Him 💭☁️"
+title: Do Not Do The Thinking For Him 💭
 date: 2026-03-28
-source: "https://islaamchildrenbooks.blogspot.com/2026/03/do-not-do-thinking-for-him.html"
-labels: []
+lead: The child was not created empty.
+featured: false
 ---
 The child was not created empty.
 
