@@ -17,14 +17,12 @@ I launched this platform to be a creative studio dedicated to building refreshin
 
 We cook products here from scratch using three fresh, core ingredients:
 
-* **Authentic Classical Sources (The Base)**
-  Straight from classical Arabic texts, with no processed junk, no modern filler, and no shady deviations mixed in. We like it clean, organic, and real. Knowledge that is correct to the bone, and good for the soul.
-
-* **Thoughtful Design & Layout (The Presentation)**
-  Plated with clean typography and space to breathe. Nobody wants a messy plate, no matter how good the food is. (If you've ever tried tricking a kid into eating veggies, you already know how this works…shh…!)
-
-* **Full-Stack Development (The Heat)**
-  Bake it in code so it actually moves. Paper is great, but we know a lot of kids are already glued to their screens. So, we trick them into tapping their way back to paper. They could hear and interact with the lessons, until they gain enough attention-span back to let that piece of glass and plastic breathe. We feel you.
+- **Authentic Classical Sources (The Base)**
+Straight from classical Arabic texts, with no processed junk, no modern filler, and no shady deviations mixed in. We like it clean, organic, and real. Knowledge that is correct to the bone, and good for the soul.
+- **Thoughtful Design & Layout (The Presentation)**
+Plated with clean typography and space to breathe. Nobody wants a messy plate, no matter how good the food is. (If you've ever tried tricking a kid into eating veggies, you already know how this works…shh…!)
+- **Full-Stack Development (The Heat)**
+Bake it in code so it actually moves. Paper is great, but we know a lot of kids are already glued to their screens. So, we trick them into tapping their way back to paper. They could hear and interact with the lessons, until they gain enough attention-span back to let that piece of glass and plastic breathe. We feel you.
 
 Toss all three into one pot, and you get learning resources that don't taste like medicine. Real substance, served nicely. I would want my kids to have something worth digesting, something that respects their intelligence, while saving your sanity as a parent.
 
@@ -32,7 +30,7 @@ Toss all three into one pot, and you get learning resources that don't taste lik
 
 ### The Builder Behind the Studio
 
-Hi, I'm Abdu ar-Rahman.
+Salam, I'm Abdu ar-Rahman.
 
 I build to serve Islam. I love my religion, the Arabic language, and the legacy of our predecessors and scholars.
 
