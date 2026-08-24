@@ -1,44 +1,57 @@
 ---
 title: About Us
 ---
-
 ## About & Vision
 
 ---
 
 ### Bringing Craftsmanship, Joy, and Clarity Back to Islamic Learning
 
-Learning the basics of Arabic, the Qurʾān, and Islamic foundations should feel engaging, beautiful, and effortless for a child. 
+Learning Arabic, the Qurʾān, and Islamic sciences should feel engaging, beautiful, and effortless for a child. Because it is!
 
-This platform is a creative studio dedicated to building fresh, high-quality educational tools for the modern young learner. By combining classical text study, thoughtful design, and full-stack software development, every product here is engineered to make learning active, intuitive, and fun—both on the page and on the screen.
+I launched this platform to be a creative studio dedicated to building refreshing, high-quality educational tools for our young learners…for learners of all ages!
 
 ---
 
-### How We Build
+### The Recipe
 
-* **Clean, Focus-First Design**  
-  Kids learn best when they aren't overwhelmed by visual clutter, ads, or chaotic animations. We focus on beautiful typography, harmonious colors, and intuitive layouts that keep a child's attention on what actually matters: the content.
+We cook products here from scratch using three fresh, core ingredients:
 
-* **Natural Bilingual Flow**  
-  Grounded in authentic Arabic sources, our books and apps are designed specifically for young minds living in a bilingual world. We bridge English and classical Arabic in a way that feels natural, structured, and easy to absorb.
+* **Authentic Classical Sources (The Base)**
+  Straight from classical Arabic texts, with no processed junk, no modern filler, and no shady deviations mixed in. We like it clean, organic, and real. Knowledge that is correct to the bone, and good for the soul.
 
-* **Built for Both Hands & Screens**  
-  Whether your family prefers physical books at the kitchen table or interactive apps on a tablet, our tools are built from day one to work seamlessly across print and web formats.
+* **Thoughtful Design & Layout (The Presentation)**
+  Plated with clean typography and space to breathe. Nobody wants a messy plate, no matter how good the food is. (If you've ever tried tricking a kid into eating veggies, you already know how this works…shh…!)
+
+* **Full-Stack Development (The Heat)**
+  Bake it in code so it actually moves. Paper is great, but we know a lot of kids are already glued to their screens. So, we trick them into tapping their way back to paper. They could hear and interact with the lessons, until they gain enough attention-span back to let that piece of glass and plastic breathe. We feel you.
+
+Toss all three into one pot, and you get learning resources that don't taste like medicine. Real substance, served nicely. I would want my kids to have something worth digesting, something that respects their intelligence, while saving your sanity as a parent.
 
 ---
 
 ### The Builder Behind the Studio
 
-Hi, I’m **Abu Sahl**. 
+Hi, I'm Abdu ar-Rahman.
 
-I’m an educational product builder working at the crossroads of classical Arabic translation, instructional design, and software engineering. 
+I build to serve Islam. I love my religion, the Arabic language, and the legacy of our predecessors and scholars.
 
-I started this project because I wanted to create the kinds of books and apps I wish existed: tools that respect a child's intelligence, honor authentic knowledge, and look like they were crafted with real care and modern craftsmanship. I handle the entire pipeline—from the original text and pedagogical layout to the final print design and code—to ensure every tool feels cohesive, polished, and delightful to use.
+I also love solving puzzles, and I love colors. It felt natural to combine the two to benefit myself and others.
+
+And since Islamic knowledge is inherently majestic and beautiful, my skills serve only to bring that out to people, so they could see what I see.
+
+I see every single step—translation, typography, color, full-stack software—as a rewarding puzzle that I genuinely love solving, and love seeing it appreciated.
+
+I want to devote my creative energy and skills to something that matters: honoring sacred knowledge and presenting it with excellence.
 
 ---
 
-### Let’s Connect
+### Let's Connect
 
-Whether you’re a parent looking for fresh learning tools, a homeschooling family, or a publisher/educator interested in collaborating or deploying these resources:
+I put real time and care into these puzzles, and I'd really appreciate connecting with people who see what I see here. Two minds are better than one, and four arms are better than two. I can only go so far on my own.
 
-📩 **Get in touch:** [alqaddaaree@gmail.com](mailto:alqaddaaree@gmail.com)
+So, if this resonates with you, and you want to help in any way, I'd be glad to hear from you.
+
+Please don't be formal, I'm not the corporate type, just your brother.
+
+📩 Say salam: [alqaddaaree@gmail.com](mailto:alqaddaaree@gmail.com)
