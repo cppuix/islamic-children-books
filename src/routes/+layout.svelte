@@ -18,24 +18,17 @@
     const siteUrl = "https://islamic-children-books.vercel.app/";
     const ogImage = `${siteUrl}/images/og-image.png`;
 
-    afterNavigate(() => { isOpen = false; });
+    // Close menu AND track pageview on every route change (including initial load)
+    afterNavigate(({ to }) => {
+        isOpen = false;
 
-    // SVELTE 5 GA4 TRACKING:
-    // $effect runs whenever its dependencies change. 
-    // Because `page.url.pathname` changes on every route, this fires on every sub-page navigation.
-    $effect(() => {
-        // Read the path to subscribe to changes
-        const path = page.url.pathname + page.url.search;
-        
-        // Wait for the browser thread to ensure gtag is loaded and document.title is updated
-        if (typeof window !== 'undefined' && window.gtag) {
-            // Force GA4 to register a new page view with the new path
-            window.gtag('event', 'page_view', {
-                page_path: path,
-                page_title: document.title,
-                page_location: window.location.href
-            });
-        }
+        if (typeof window.gtag !== "function") return;
+
+        window.gtag("event", "page_view", {
+            page_path: to?.url.pathname,
+            page_location: window.location.href,
+            page_title: document.title,
+        });
     });
 </script>
 
@@ -49,8 +42,12 @@
         }
         gtag("js", new Date());
 
-        gtag("config", "G-VKKGB5SWTL");
+        // CRITICAL: disable the automatic initial page_view.
+        // afterNavigate fires on first mount too, so you'd double-count
+        // the root page without this flag.
+        gtag("config", "G-VKKGB5SWTL", { send_page_view: false });
     </script>
+    
     <!-- Basic Meta -->
     <title>{siteTitle}</title>
     <meta name="description" content={siteDescription} />
