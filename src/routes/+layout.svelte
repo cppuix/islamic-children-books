@@ -19,12 +19,15 @@
     const ogImage = `${siteUrl}/images/og-image.png`;
 
     afterNavigate(() => {
-        isOpen = false;
-
-        if (typeof window !== "undefined" && typeof window.gtag === "function") {
-            window.gtag("event", "page_view", {
+        isOpen = false; // Your existing menu close logic
+        
+        // 1. Check if we are in the browser and gtag is loaded
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            // 2. Update the GA config with the NEW path. 
+            // This is the specific command that forces GA4 to log a new page view.
+            window.gtag('config', 'G-VKKGB5SWTL', {
                 page_path: page.url.pathname + page.url.search,
-                page_title: document.title,
+                page_title: document.title
             });
         }
     });
