@@ -16,7 +16,8 @@ export async function load({ params }) {
         const post = await import(`$lib/content/essays/${params.slug}.md`);
         return {
             content: post.default, // The compiled Svelte component
-            meta: post.metadata    // The YAML frontmatter
+            meta: post.metadata,   // The YAML frontmatter
+            title: post.metadata?.title || 'Essay' // Used for the browser tab title
         };
     } catch (e) {
         error(404, `Could not find essay "${params.slug}"`);

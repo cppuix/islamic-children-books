@@ -5,6 +5,7 @@ export async function load() {
 
     return {
         content: post.default, // The compiled Markdown component
-        meta: post.metadata    // Any frontmatter variables
+        meta: post.metadata,   // Any frontmatter variables
+        title: post.metadata?.title || 'About' // Used for the browser tab title
     };
 }

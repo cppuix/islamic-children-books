@@ -142,6 +142,15 @@
     --text-scale: 100%;
 }
 
+/* Scale text down on small screens so lines don't wrap awkwardly */
+@media (max-width: 640px)
+{
+    :root
+    {
+        --text-scale: 90%;
+    }
+}
+
 /* =========================================
      3. USAGE
      Now you write your CSS using the Book names
@@ -183,7 +192,7 @@ a:hover
 
 h1
 {
-    font-size: 2.5rem;
+    font-size: clamp(1.85rem, 6vw, 2.5rem);
     margin: 0;
 }
 

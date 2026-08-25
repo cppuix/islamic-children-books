@@ -63,6 +63,8 @@
 <style>
     li {
         margin-bottom: 2rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     a {
         text-decoration: underline;
@@ -71,6 +73,8 @@
     .lead {
         color: var(--ink-faded);
         font-size: 0.8em;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     .date {
         color: var(--ribbon-red);

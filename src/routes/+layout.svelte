@@ -18,41 +18,36 @@
     const siteUrl = "https://islamic-children-books.vercel.app/";
     const ogImage = `${siteUrl}/images/og-image.png`;
 
-    // Close menu AND track pageview on every route change (including initial load)
-    afterNavigate(({ to }) => {
+    // Per-page title (pages set `title` in their load data), with fallback to the site title
+    let pageTitle = $derived(page.data?.title ? `${page.data.title} — ${siteTitle}` : siteTitle);
+    let canonicalUrl = $derived(siteUrl.replace(/\/$/, "") + page.url.pathname);
+
+    // Close menu AND track a pageview on every route change (including initial load)
+    afterNavigate(({ url }) => {
         isOpen = false;
-
-        if (typeof window.gtag !== "function") return;
-
-        window.gtag("event", "page_view", {
-            page_path: to?.url.pathname,
-            page_location: window.location.href,
+        gtag("event", "page_view", {
+            page_path: url.pathname + url.search,
             page_title: document.title,
+            page_location: url.href
         });
     });
 </script>
 
 <svelte:head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKGB5SWTL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        // CRITICAL: disable the automatic initial page_view.
-        // afterNavigate fires on first mount too, so you'd double-count
-        // the root page without this flag.
-        gtag("config", "G-VKKGB5SWTL", { send_page_view: false });
-    </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    // send_page_view:false so pageviews are sent manually in afterNavigate (SPA navigation)
+    gtag("config", "G-VKKGB5SWTL", { send_page_view: false });
+</script>
     
     <!-- Basic Meta -->
-    <title>{siteTitle}</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={siteDescription} />
     <meta name="author" content="Islamic Children's Books" />
-    <link rel="canonical" href={siteUrl} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Favicons / Icons -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -65,14 +60,14 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-    <meta property="og:title" content={siteTitle} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={siteDescription} />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={siteDescription} />
     <meta name="twitter:image" content={ogImage} />
 </svelte:head>
@@ -197,6 +192,15 @@
         margin: 2rem;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    /* Give content more room on small screens (essays get very narrow otherwise) */
+    @media (max-width: 640px) {
+        main {
+            margin: 1rem;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     footer {

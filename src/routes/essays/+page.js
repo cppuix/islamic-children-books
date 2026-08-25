@@ -9,8 +9,9 @@ export function load() {
     // 2. Spread into a new array to avoid mutating the cached JSON module
     const essays = [...essaysData].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    return { 
-        essays, 
-        searchIndex 
+    return {
+        essays,
+        searchIndex,
+        title: "Essays"
     };
 }

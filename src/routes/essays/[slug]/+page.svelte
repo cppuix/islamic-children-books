@@ -46,17 +46,44 @@
     .blog-container
     {
         margin-top: 1rem;
+        margin-inline: auto;
         padding: 20px;
         padding-top: 1px;
+        max-width: 75ch; /* comfortable reading length */
         border-radius: 10px;
         box-shadow:
             -2px -2px 16px rgb(from var(--gold-leaf) r g b / 10%),
-            2px 2px 16px rgb(from var(--gold-leaf) r g b / 10%)
+            2px 2px 16px rgb(from var(--gold-leaf) r g b / 10%);
+        /* Break long words/URLs so nothing overflows the card */
+        overflow-wrap: break-word;
+        word-break: break-word;
+        min-width: 0;
+    }
+
+    /* Keep markdown content readable and inside the card */
+    .blog-container :is(p, li, blockquote) {
+        line-height: 1.7;
+    }
+
+    .blog-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .blog-container pre {
+        max-width: 100%;
+        overflow-x: auto;
     }
 
     a {
         text-decoration: underline;
         color: var(--leather-binding);
+    }
+
+    @media (max-width: 640px) {
+        .blog-container {
+            padding: 12px;
+        }
     }
 
     .date {
