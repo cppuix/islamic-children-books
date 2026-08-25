@@ -29,7 +29,7 @@ labels: []
 >
 > And this is the reality every time we complain.
 >
->  ﴿ قَالَ إِنَّمَاۤ أَشۡكُوا۟ بَثِّی وَحُزۡنِیۤ إِلَى ٱللَّهِ ﴾
+>  <span class="ayah">﴿ قَالَ إِنَّمَاۤ أَشۡكُوا۟ بَثِّی وَحُزۡنِیۤ إِلَى ٱللَّهِ ﴾</span>
 >
 > “He said: I only complain of my grief and my sorrow to Allāh”
 > [Yūsuf, 86]
@@ -46,7 +46,7 @@ labels: []
 > How can you rely on the people to save you when they are just as poor as
 > you?
 >
-> ﴿ یَـٰۤأَیُّهَا ٱلنَّاسُ أَنتُمُ ٱلۡفُقَرَاۤءُ إِلَى ٱللَّهِۖ وَٱللَّهُ هُوَ ٱلۡغَنِیُّ ٱلۡحَمِیدُ ﴾
+> <span class="ayah">﴿ یَـٰۤأَیُّهَا ٱلنَّاسُ أَنتُمُ ٱلۡفُقَرَاۤءُ إِلَى ٱللَّهِۖ وَٱللَّهُ هُوَ ٱلۡغَنِیُّ ٱلۡحَمِیدُ ﴾</span>
 >
 > “O humanity! It is you who are poor and in need of Allāh, but Allāh is Rich (free of all needs), Worthy of all praise.”
 > [Fāṭir, 15]

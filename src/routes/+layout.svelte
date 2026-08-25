@@ -23,12 +23,12 @@
     let canonicalUrl = $derived(siteUrl.replace(/\/$/, "") + page.url.pathname);
 
     // Close menu AND track a pageview on every route change (including initial load)
-    afterNavigate(({ url }) => {
+    afterNavigate(() => {
         isOpen = false;
         gtag("event", "page_view", {
-            page_path: url.pathname + url.search,
+            page_path: page.url.pathname + page.url.search,
             page_title: document.title,
-            page_location: url.href
+            page_location: page.url.href
         });
     });
 </script>

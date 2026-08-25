@@ -28,7 +28,7 @@
 
 @font-face
 {
-    font-family: 'AmiriQuran';
+    font-family: 'Amiri Quran';
     /* The name YOU give it */
     src: url('/fonts/AmiriQuran.woff2') format('woff2');
     /* Where to find it */
@@ -37,6 +37,9 @@
     font-style: normal;
     /* Not italic */
     font-display: swap;
+    /* Only used for Arabic characters, so it acts as an automatic
+       fallback for Arabic text without needing lang="ar" wrappers */
+    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
     /* How to handle loading (explained below) */
 }
 
@@ -236,4 +239,37 @@ blockquote
     padding: 0.05rem;
     padding-left: 1rem;
     background-color: rgb(from var(--gold-shine) r g b / 50%);
+}
+
+/* On small screens, quotes should not eat up the narrow column */
+@media (max-width: 640px)
+{
+    blockquote
+    {
+        border-left-width: 0.25rem;
+        padding-left: 0.5rem;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: rgb(from var(--gold-shine) r g b / 30%);
+    }
+}
+
+/* Auto-detect RTL for Arabic (and other RTL scripts) inside essay/about prose.
+   `unicode-bidi: plaintext` lets each block infer its own base direction from
+   its first strong character, so Arabic paragraphs flow & align right-to-left
+   without having to hand-wrap every one in HTML. English stays LTR. */
+.blog-container :is(p, li, blockquote, h1, h2, h3, h4, h5, h6)
+{
+    unicode-bidi: plaintext;
+    text-align: start;
+}
+
+/* Quranic ayah (the ﴿ ... ﴾ passages) — render in Amiri Quran.
+   IMPORTANT: no `unicode-bidi: isolate` here. Isolating the span hides its
+   Arabic from the parent paragraph's `plaintext` direction detection, which
+   keeps the line LTR/left-aligned. Without it, the paragraph infers RTL and
+   the ayah aligns right like the rest of the Arabic text. */
+.ayah
+{
+    font-family: 'Amiri Quran', 'Lateef', serif;
 }
