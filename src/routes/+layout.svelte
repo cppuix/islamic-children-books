@@ -18,16 +18,22 @@
     const siteUrl = "https://islamic-children-books.vercel.app/";
     const ogImage = `${siteUrl}/images/og-image.png`;
 
-    afterNavigate(() => {
-        isOpen = false; // Your existing menu close logic
+    afterNavigate(() => { isOpen = false; });
+
+    // SVELTE 5 GA4 TRACKING:
+    // $effect runs whenever its dependencies change. 
+    // Because `page.url.pathname` changes on every route, this fires on every sub-page navigation.
+    $effect(() => {
+        // Read the path to subscribe to changes
+        const path = page.url.pathname + page.url.search;
         
-        // 1. Check if we are in the browser and gtag is loaded
-        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-            // 2. Update the GA config with the NEW path. 
-            // This is the specific command that forces GA4 to log a new page view.
-            window.gtag('config', 'G-VKKGB5SWTL', {
-                page_path: page.url.pathname + page.url.search,
-                page_title: document.title
+        // Wait for the browser thread to ensure gtag is loaded and document.title is updated
+        if (typeof window !== 'undefined' && window.gtag) {
+            // Force GA4 to register a new page view with the new path
+            window.gtag('event', 'page_view', {
+                page_path: path,
+                page_title: document.title,
+                page_location: window.location.href
             });
         }
     });
