@@ -18,18 +18,29 @@
     const siteUrl = "https://islamic-children-books.vercel.app/";
     const ogImage = `${siteUrl}/images/og-image.png`;
 
-    afterNavigate(() => { isOpen = false; });
+    afterNavigate(() => {
+        isOpen = false;
+
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+            window.gtag("event", "page_view", {
+                page_path: page.url.pathname + page.url.search,
+                page_title: document.title,
+            });
+        }
+    });
 </script>
 
 <svelte:head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKGB5SWTL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-VKKGB5SWTL');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-VKKGB5SWTL");
     </script>
     <!-- Basic Meta -->
     <title>{siteTitle}</title>
@@ -63,8 +74,8 @@
 <nav id="mainNav" aria-label="Main Navigation">
     <WaxSeal size="4rem" aria-label="Home" />
 
-    <button 
-        id="burger-button" 
+    <button
+        id="burger-button"
         onclick={setIsOpen}
         aria-expanded={isOpen}
         aria-controls="nav-container"
@@ -75,36 +86,36 @@
 
     <div id="nav-container" class:open={isOpen}>
         <div id="nav-links">
-            <a 
-                href="/" 
-                class="nav-link" 
+            <a
+                href="/"
+                class="nav-link"
                 class:active={page.url.pathname === "/"}
-                aria-current={page.url.pathname === "/" ? "page" : undefined}
-            >Home</a>
-            <a 
-                href="/booklets" 
-                class="nav-link" 
+                aria-current={page.url.pathname === "/" ? "page" : undefined}>Home</a
+            >
+            <a
+                href="/booklets"
+                class="nav-link"
                 class:active={page.url.pathname === "/booklets"}
-                aria-current={page.url.pathname === "/booklets" ? "page" : undefined}
-            >Booklets</a>
-            <a 
-                href="/apps" 
-                class="nav-link" 
+                aria-current={page.url.pathname === "/booklets" ? "page" : undefined}>Booklets</a
+            >
+            <a
+                href="/apps"
+                class="nav-link"
                 class:active={page.url.pathname === "/apps"}
-                aria-current={page.url.pathname === "/apps" ? "page" : undefined}
-            >Apps</a>
-            <a 
-                href="/essays" 
-                class="nav-link" 
+                aria-current={page.url.pathname === "/apps" ? "page" : undefined}>Apps</a
+            >
+            <a
+                href="/essays"
+                class="nav-link"
                 class:active={page.url.pathname === "/essays"}
-                aria-current={page.url.pathname === "/essays" ? "page" : undefined}
-            >Essays</a>
-            <a 
-                href="/about" 
-                class="nav-link" 
+                aria-current={page.url.pathname === "/essays" ? "page" : undefined}>Essays</a
+            >
+            <a
+                href="/about"
+                class="nav-link"
                 class:active={page.url.pathname === "/about"}
-                aria-current={page.url.pathname === "/about" ? "page" : undefined}
-            >About</a>
+                aria-current={page.url.pathname === "/about" ? "page" : undefined}>About</a
+            >
         </div>
     </div>
 </nav>
@@ -168,7 +179,7 @@
     .nav-link {
         padding: 20px;
     }
-    
+
     .nav-link.active {
         border-bottom: 1px solid var(--gold-leaf);
         background-color: var(--gold-shine);
