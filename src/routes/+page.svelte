@@ -48,7 +48,7 @@
             {#each featuredBooks as book}
                 <div class="spotlight-item">
                     <span class="spotlight-label">FEATURED BOOKLET</span>
-                    <a href={book.link} target="_blank" rel="noopener" class="spotlight-text">
+                    <a href="/booklets/{book.id}" class="spotlight-text">
                         <span class="book-name">{book.title}</span>
                         <span class="dot">•</span>
                         <span class="book-meta">{book.subtitle}</span>
@@ -61,7 +61,7 @@
             {#each featuredApps as app}
                 <div class="spotlight-item">
                     <span class="spotlight-label">LEARNING TOOL</span>
-                    <a href={app.link} target="_blank" rel="noopener" class="spotlight-text">
+                    <a href="/apps/{app.id}" class="spotlight-text">
                         <span class="book-name">{app.title}</span>
                         <span class="dot">•</span>
                         <span class="book-meta">{app.subtitle}</span>
@@ -74,7 +74,7 @@
             {#each featuredEssays as essay}
                 <div class="spotlight-item">
                     <span class="spotlight-label">RECOMMENDED ESSAY</span>
-                    <a href={essay.link} target="_blank" rel="noopener" class="spotlight-text">
+                    <a href="/essays/{essay.id}" class="spotlight-text">
                         <span class="book-name">"{essay.title}"</span>
                         <span class="dot">•</span>
                         <span class="book-meta">{essay.lead}</span>

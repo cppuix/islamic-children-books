@@ -10,7 +10,7 @@
 
 <div class="apps-inventory">
     {#each apps as app}
-        <div class="app-card">
+        <a class="app-card" href="/apps/{app.id}">
             <div class="cover-frame">
                 <img src={app.thumbnail} alt={app.title} class="cover-img" />
             </div>
@@ -18,21 +18,14 @@
                 <h3 class="app-title">{app.title}</h3>
                 <p class="app-subtitle">{app.subtitle}</p>
             </div>
-            <!--<p class="app-category">{app.category}</p>!-->
             <p class="app-description">{app.description}</p>
-            <a
-                target="_blank"
-                class="app-link read-btn"
-                href={app.link}
-                aria-label="app-link">Visit</a
-            >
             <p class="price">{app.pricing}</p>
             <div class="app-tags">
                 {#each app.tags as tag}
                     <p class="app-tag">{tag}</p>
                 {/each}
             </div>
-        </div>
+        </a>
     {/each}
 </div>
 
@@ -59,6 +52,13 @@
         border: 1px solid rgb(from var(--gold-leaf) r g b / 50%);
         background-color: rgb(from var(--paper-page) r g b / 10%);
         box-shadow: 0 5px 20px rgba(185, 138, 46, 0.2);
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+    .app-card:hover {
+        border-color: var(--gold-leaf);
+        transform: translateY(-2px);
     }
 
     .cover-frame {
@@ -116,7 +116,6 @@
         margin: 0;
         color: var(--leather-binding);
     }
-
     .app-subtitle {
         font-style: italic;
         color: var(--ink-faded);
@@ -127,27 +126,8 @@
     .app-description {
         font-size: 0.95rem;
         color: var(--ink-black);
-        
         text-align: left;
-        flex-grow: 1; /* Pushes the button to the bottom */
-    }
-
-    .read-btn {
-        align-self: flex-start;
-        padding: 0.5rem 1rem;
-        background-color: var(--leather-binding);
-        color: var(--paper-page);
-        text-decoration: none;
-        border-radius: 4px;
-        font-size: 0.9rem;
-        width: 100%;
-        text-align: center;
-        transition: background-color 0.2s;
-        box-sizing: border-box;
-    }
-
-    .read-btn:hover {
-        background-color: var(--ink-green);
+        flex-grow: 1; /* Pushes the tags to the bottom */
     }
 
     .price

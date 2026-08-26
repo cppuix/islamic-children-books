@@ -59,7 +59,6 @@ labels: []
 
 <https://t.me/uponthepathofsalaf/231>
 
-I
-said: Be like that kid who cries and calls to his mommy for help while
+I said: Be like that kid who cries and calls to his mommy for help while
 his mommy herself is the one giving him a good beating because he was
 such a bad boy.
